@@ -39,4 +39,3 @@ namespace OctoberJemini.QuietMap {
   public List<Record> Records=new List<Record>();
  }
 }
-

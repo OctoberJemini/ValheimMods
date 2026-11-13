@@ -35,6 +35,6 @@ An independent implementation by OctoberJemini. Code and icon created with AI as
 
 ## Source and support
 
-[Source and mod index](https://github.com/OctoberJemini/ValheimMods) · [Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) · [Feature request](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml)
+[Source and mod index](https://github.com/OctoberJemini/ValheimMods) Â· [Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) Â· [Feature request](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml)
 
 Build instructions: [BUILDING.md](../../BUILDING.md).

@@ -177,9 +177,3 @@ namespace OctoberJemini.TowerStairs
         }
     }
 }
-
-
-
-
-
-

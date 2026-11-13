@@ -411,6 +411,3 @@ namespace OctoberJemini.QuietMap {
   void OnDestroy(){EndSession();harmony?.UnpatchSelf();if(Instance==this)Instance=null;}
  }
 }
-
-
-

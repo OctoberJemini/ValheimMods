@@ -2,7 +2,7 @@
 
 Public source, mod index, and shared bug tracker for OctoberJemini's Valheim mods.
 
-[Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) · [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) · [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/)
+[Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) Â· [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) Â· [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/)
 
 ## Mods
 
