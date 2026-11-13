@@ -6,17 +6,17 @@ Public source, mod index, and shared bug tracker for OctoberJemini's Valheim mod
 
 ## Mods
 
-| Mod | Source | Download |
-| --- | --- | --- |
-| Building Pieces | [Source](mods/Building_Pieces) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Building_Pieces/) |
-| Dragon Egg Stacks | [Source](mods/Dragon_Egg_Stacks) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Dragon_Egg_Stacks/) |
-| Auto Mapping | [Source](mods/Auto_Mapping) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/) |
-| Manual Tar Pickup | [Source](mods/Manual_Tar_Pickup) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Manual_Tar_Pickup/) |
-| Auto Wishbone & Andvaranaut | [Source](mods/Auto_Wishbone_Andvaranaut) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Wishbone_Andvaranaut/) |
-| Compact Crafting Upgrades | [Source](mods/Compact_Crafting_Upgrades) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Compact_Crafting_Upgrades/) |
-| Epic Loot No Fog Destinations | [Existing repository](https://github.com/OctoberJemini/EpicLootNoFogDestinations) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_No_Fog_Destinations/) |
-| Epic Loot Luck Finds | [Existing repository](https://github.com/OctoberJemini/EpicLootLuckFinds) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_Luck_Finds/) |
-| Simple Item Upgrade Preview | [Existing repository](https://github.com/OctoberJemini/SimpleItemUpgradePreview) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Simple_Item_Upgrade_Preview/) |
+| Mod | Source | Download | Support |
+| --- | --- | --- | --- |
+| Building Pieces | [Source](mods/Building_Pieces) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Building_Pieces/) | [Source and bug reports](https://old.thunderstore.io/c/valheim/p/OctoberJemini/Building_Pieces/wiki/6815-source-code-and-bug-reports/) |
+| Dragon Egg Stacks | [Source](mods/Dragon_Egg_Stacks) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Dragon_Egg_Stacks/) | [Source and bug reports](https://old.thunderstore.io/c/valheim/p/OctoberJemini/Dragon_Egg_Stacks/wiki/6816-source-code-and-bug-reports/) |
+| Auto Mapping | [Source](mods/Auto_Mapping) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/) | [Source and bug reports](https://old.thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/wiki/6817-source-code-and-bug-reports/) |
+| Manual Tar Pickup | [Source](mods/Manual_Tar_Pickup) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Manual_Tar_Pickup/) | [Source and bug reports](https://old.thunderstore.io/c/valheim/p/OctoberJemini/Manual_Tar_Pickup/wiki/6818-source-code-and-bug-reports/) |
+| Auto Wishbone & Andvaranaut | [Source](mods/Auto_Wishbone_Andvaranaut) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Wishbone_Andvaranaut/) | [Source and bug reports](https://old.thunderstore.io/c/valheim/p/OctoberJemini/Auto_Wishbone_Andvaranaut/wiki/6819-source-code-and-bug-reports/) |
+| Compact Crafting Upgrades | [Source](mods/Compact_Crafting_Upgrades) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Compact_Crafting_Upgrades/) | [Source and bug reports](https://old.thunderstore.io/c/valheim/p/OctoberJemini/Compact_Crafting_Upgrades/wiki/6820-source-code-and-bug-reports/) |
+| Epic Loot No Fog Destinations | [Existing repository](https://github.com/OctoberJemini/EpicLootNoFogDestinations) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_No_Fog_Destinations/) | [Source and bug reports](https://old.thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_No_Fog_Destinations/wiki/6821-source-code-and-bug-reports/) |
+| Epic Loot Luck Finds | [Existing repository](https://github.com/OctoberJemini/EpicLootLuckFinds) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_Luck_Finds/) | [Source and bug reports](https://old.thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_Luck_Finds/wiki/6822-source-code-and-bug-reports/) |
+| Simple Item Upgrade Preview | [Existing repository](https://github.com/OctoberJemini/SimpleItemUpgradePreview) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Simple_Item_Upgrade_Preview/) | [Source and bug reports](https://old.thunderstore.io/c/valheim/p/OctoberJemini/Simple_Item_Upgrade_Preview/wiki/6823-source-code-and-bug-reports/) |
 
 Building Pieces contains Tower Stairs, Roof Corners 45, and Inverted Stone Ramp. Existing Epic Loot and upgrade-preview repositories retain their history and source; this hub links to them rather than duplicating their code.
 

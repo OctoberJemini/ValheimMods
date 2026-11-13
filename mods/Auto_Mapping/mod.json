@@ -2,5 +2,6 @@
   "name": "Auto Mapping",
   "thunderstore": "https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/",
   "version_at_import": "1.1.4",
-  "source": "mods/Auto_Mapping"
+  "source": "mods/Auto_Mapping",
+  "thunderstore_support": "https://old.thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/wiki/6817-source-code-and-bug-reports/"
 }
