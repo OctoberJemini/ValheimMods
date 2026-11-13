@@ -1,5 +1,12 @@
 # Auto Wishbone & Andvaranaut
 
+## Bug reports and source code
+
+[Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) | [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) | [Browse source and all mods](https://github.com/OctoberJemini/ValheimMods)
+
+Choose **Auto Wishbone & Andvaranaut** in the report form and include the mod version, Valheim version, steps to reproduce, and relevant logs or screenshots.
+
+
 Carry a Wishbone to activate its finder without using an equipment slot. If Epic Loot is installed, carrying Andvaranaut activates its treasure finder too.
 
 Both items must be in your player inventory. Their status icons remain visible in the status-effect row while active, even when no target is nearby. Detection ranges and proximity pulses use the original item effects. Multiple copies do not multiply the effect.

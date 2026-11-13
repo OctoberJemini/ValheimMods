@@ -1,6 +1,6 @@
 {
   "name": "Auto_Mapping",
-  "version_number": "1.1.4",
+  "version_number": "1.1.5",
   "website_url": "https://github.com/OctoberJemini/ValheimMods",
   "description": "Automatically mark discovered portals, dungeons and landmarks. Track portal names, remove destroyed portal pins, and cross off visited locations.",
   "dependencies": [

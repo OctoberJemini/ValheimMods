@@ -3,6 +3,10 @@ description: Report a problem with an OctoberJemini Valheim mod.
 title: "[Bug]: "
 labels: [bug]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        **Latest releases only:** We support only the latest release of the affected mod and Valheim. Please update both before submitting a bug report, then check whether the problem still occurs.
   - type: dropdown
     id: mod
     attributes:
@@ -18,19 +22,6 @@ body:
         - "Epic Loot Luck Finds"
         - "Simple Item Upgrade Preview"
         - "Multiple mods / unsure"
-    validations:
-      required: true
-  - type: input
-    id: mod-version
-    attributes:
-      label: Mod version
-      description: Version shown in your mod manager or BepInEx startup log.
-    validations:
-      required: true
-  - type: input
-    id: game-version
-    attributes:
-      label: Valheim version
     validations:
       required: true
   - type: dropdown

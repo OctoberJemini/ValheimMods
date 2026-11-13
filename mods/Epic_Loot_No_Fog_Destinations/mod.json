@@ -3,5 +3,6 @@
   "thunderstore": "https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_No_Fog_Destinations/",
   "version_at_import": "0.3.0",
   "source": "https://github.com/OctoberJemini/EpicLootNoFogDestinations",
-  "thunderstore_support": "https://old.thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_No_Fog_Destinations/wiki/6821-source-code-and-bug-reports/"
+  "thunderstore_support": "https://old.thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_No_Fog_Destinations/wiki/6821-source-code-and-bug-reports/",
+  "latest_package_version": "0.3.1"
 }

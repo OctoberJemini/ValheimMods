@@ -1,6 +1,6 @@
 {
   "name": "Dragon_Egg_Stacks",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "website_url": "https://github.com/OctoberJemini/ValheimMods",
   "description": "Configurable dragon egg stacking, with a default stack size of 50.",
   "dependencies": [

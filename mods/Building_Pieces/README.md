@@ -1,5 +1,12 @@
 # Building Pieces
 
+## Bug reports and source code
+
+[Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) | [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) | [Browse source and all mods](https://github.com/OctoberJemini/ValheimMods)
+
+Choose **Building Pieces** in the report form and include the mod version, Valheim version, steps to reproduce, and relevant logs or screenshots.
+
+
 OctoberJemini's additional building pieces in one package.
 
 - Tower Stairs 0.4.2

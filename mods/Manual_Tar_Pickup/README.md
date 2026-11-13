@@ -1,5 +1,12 @@
 # Manual Tar Pickup
 
+## Bug reports and source code
+
+[Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) | [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) | [Browse source and all mods](https://github.com/OctoberJemini/ValheimMods)
+
+Choose **Manual Tar Pickup** in the report form and include the mod version, Valheim version, steps to reproduce, and relevant logs or screenshots.
+
+
 Reach into tar and retrieve dropped items with your normal interact key, **E** by default.
 
 Automatic pickup continues to ignore items stuck in tar, so you choose what to pull out. Your normal interaction distance and inventory restrictions still apply. If you rebound Interact, use your chosen key.

@@ -1,5 +1,12 @@
 # Auto Mapping
 
+## Bug reports and source code
+
+[Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) | [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) | [Browse source and all mods](https://github.com/OctoberJemini/ValheimMods)
+
+Choose **Auto Mapping** in the report form and include the mod version, Valheim version, steps to reproduce, and relevant logs or screenshots.
+
+
 Automatically mark the portals, dungeons and landmarks you discover while exploring Valheim.
 
 - Portal markers follow their names and disappear when destruction is confirmed by the game.

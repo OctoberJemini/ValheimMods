@@ -1,6 +1,6 @@
 {
   "name": "Compact_Crafting_Upgrades",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "website_url": "https://github.com/OctoberJemini/ValheimMods",
   "description": "Place forge and other crafting upgrades closer together. Configurable 0.5m spacing by default; station ranges and bonuses unchanged. Initial release; in-game verification pending.",
   "dependencies": [

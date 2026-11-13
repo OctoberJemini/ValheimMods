@@ -1,5 +1,12 @@
 # Compact Crafting Upgrades
 
+## Bug reports and source code
+
+[Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) | [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) | [Browse source and all mods](https://github.com/OctoberJemini/ValheimMods)
+
+Choose **Compact Crafting Upgrades** in the report form and include the mod version, Valheim version, steps to reproduce, and relevant logs or screenshots.
+
+
 Fit your forge upgrades into a smaller workshop. Compact Crafting Upgrades reduces the minimum spacing between crafting-station upgrades to **0.5 meters** by default.
 
 Works with forge, workbench, black forge, and other pieces that use Valheim's standard station-extension spacing check. Choose a spacing from **0 to 2 meters**. Zero removes that spacing check; ordinary collision and placement restrictions still apply.
