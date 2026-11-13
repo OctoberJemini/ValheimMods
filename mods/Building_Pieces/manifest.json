@@ -1,0 +1,10 @@
+{
+  "name": "Building_Pieces",
+  "version_number": "1.1.2",
+  "website_url": "https://github.com/OctoberJemini/ValheimMods",
+  "description": "Additional Valheim building pieces: tower stairs, roof corners and an inverted stone ramp.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2360",
+    "ValheimModding-Jotunn-2.30.2"
+  ]
+}

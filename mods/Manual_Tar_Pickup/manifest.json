@@ -1,0 +1,9 @@
+{
+  "name": "Manual_Tar_Pickup",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/OctoberJemini/ValheimMods",
+  "description": "Retrieve items stuck in tar with your interact key (E). Automatic pickup still leaves tar-covered items alone.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2360"
+  ]
+}

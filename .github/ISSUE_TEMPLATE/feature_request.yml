@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest a change to a mod.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: mod
+    attributes:
+      label: Affected mod
+      options:
+        - "Building Pieces"
+        - "Dragon Egg Stacks"
+        - "Auto Mapping"
+        - "Manual Tar Pickup"
+        - "Auto Wishbone & Andvaranaut"
+        - "Compact Crafting Upgrades"
+        - "Epic Loot No Fog Destinations"
+        - "Epic Loot Luck Finds"
+        - "Simple Item Upgrade Preview"
+        - "Multiple mods / unsure"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested behavior
+    validations:
+      required: true

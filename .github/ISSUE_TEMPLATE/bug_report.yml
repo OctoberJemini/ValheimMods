@@ -1,0 +1,71 @@
+name: Bug report
+description: Report a problem with an OctoberJemini Valheim mod.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: dropdown
+    id: mod
+    attributes:
+      label: Affected mod
+      options:
+        - "Building Pieces"
+        - "Dragon Egg Stacks"
+        - "Auto Mapping"
+        - "Manual Tar Pickup"
+        - "Auto Wishbone & Andvaranaut"
+        - "Compact Crafting Upgrades"
+        - "Epic Loot No Fog Destinations"
+        - "Epic Loot Luck Finds"
+        - "Simple Item Upgrade Preview"
+        - "Multiple mods / unsure"
+    validations:
+      required: true
+  - type: input
+    id: mod-version
+    attributes:
+      label: Mod version
+      description: Version shown in your mod manager or BepInEx startup log.
+    validations:
+      required: true
+  - type: input
+    id: game-version
+    attributes:
+      label: Valheim version
+    validations:
+      required: true
+  - type: dropdown
+    id: setup
+    attributes:
+      label: Game setup
+      options:
+        - Local single-player
+        - Local hosted multiplayer
+        - Dedicated server
+        - Other / unsure
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. ...
+2. ...
+3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs and screenshots
+      description: Attach screenshots or paste the relevant BepInEx log excerpt. Remove personal details and credentials.
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Other mods and troubleshooting
+      description: Include relevant dependency versions and any minimal-setup checks you tried.
