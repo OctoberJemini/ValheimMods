@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 
 namespace OctoberJemini.QuietMap {
- [BepInPlugin(Guid,"Auto Mapping","1.1.4")]
+ [BepInPlugin(Guid,"Auto Mapping","1.1.6")]
  [BepInDependency("digi.valheim.automappins",BepInDependency.DependencyFlags.SoftDependency)]
  [BepInDependency("com.noodle.autopoi",BepInDependency.DependencyFlags.SoftDependency)]
  [BepInDependency("com.oathorse.DWMP",BepInDependency.DependencyFlags.SoftDependency)]
@@ -308,9 +308,11 @@ namespace OctoberJemini.QuietMap {
      var borrowed=first.Kind!="Portal"&&native!=null?native.Values.FirstOrDefault(p=>p.m_type!=Minimap.PinType.Boss&&(p.m_pos-pos).sqrMagnitude<100):null;
      // Keep saved pins intact but synchronize matching location checkmarks.
      if(first.Kind!="Portal"&&borrowed==null&&gamePins!=null)
-      borrowed=gamePins.FirstOrDefault(p=>p.m_save&&p.m_type!=Minimap.PinType.Boss&&p.m_type!=Minimap.PinType.Icon4&&
-       (p.m_pos-pos).sqrMagnitude<225&&LandmarkPolicy.MatchingSavedPin(p.m_name,label,first.Prefab));
-     if(first.Kind!="Portal"&&borrowed==null&&gamePins!=null&&gamePins.Any(p=>p.m_save&&(p.m_pos-pos).sqrMagnitude<225))continue;
+      borrowed=gamePins.FirstOrDefault(p=>LandmarkPolicy.CanReuseSavedLocationPin(p.m_save,
+       p.m_type==Minimap.PinType.Boss,p.m_type==Minimap.PinType.Icon4,
+       (p.m_pos-pos).sqrMagnitude,p.m_name,label,first.Prefab));
+     // An unrelated saved pin (including a boss marker) must not hide this location.
+     // Matching saved entrance pins are borrowed above, so they are still not duplicated.
      // Migrate exact named portal matches from the former portal tracker after a map backup.
      // Other manual pins and dungeon pins remain untouched.
      var existing=first.Kind=="Portal" && gamePins!=null?gamePins.FirstOrDefault(p=>p.m_save&&p.m_type==Minimap.PinType.Icon4&&(p.m_pos-pos).sqrMagnitude<2*2&&p.m_name==label):null;

@@ -115,6 +115,8 @@ namespace OctoberJemini.QuietMap {
    interiorLocation?inInterior&&sameInterior:!inInterior&&Math.Abs(heightDifference)<=20&&horizontalDistanceSquared<=radius*radius;
   internal static bool KeepRecord(string kind)=>kind=="Portal"||kind=="Dungeon"||kind=="Landmark";
   internal static float Alpha(bool crossed,float faded)=>crossed?faded:1f;
+  internal static bool CanReuseSavedLocationPin(bool saved,bool boss,bool portal,float distanceSquared,string label,string expected,string prefab)=>
+   saved&&!boss&&!portal&&distanceSquared<225&&MatchingSavedPin(label,expected,prefab);
   internal static bool MatchingSavedPin(string label,string expected,string prefab){
    if(string.IsNullOrWhiteSpace(label))return false;
    string name=label.Trim();
