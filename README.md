@@ -8,7 +8,7 @@ Public source, mod index, and shared bug tracker for OctoberJemini's Valheim mod
 
 | Mod | Latest package | Source | Download | Support |
 | --- | --- | --- | --- | --- |
-| Auto Mapping | 1.1.5 | [Source](./mods/Auto_Mapping/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Auto Mapping | 1.1.6 | [Source](./mods/Auto_Mapping/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
 | Auto Wishbone & Andvaranaut | 1.0.2 | [Source](./mods/Auto_Wishbone_Andvaranaut/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Wishbone_Andvaranaut/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
 | Building Pieces | 1.1.3 | [Source](./mods/Building_Pieces/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Building_Pieces/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
 | Compact Crafting Upgrades | 1.0.1 | [Source](./mods/Compact_Crafting_Upgrades/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Compact_Crafting_Upgrades/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |

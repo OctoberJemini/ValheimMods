@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.6 (unreleased)
+## 1.1.6
 - Fixed a saved map pin near a landmark preventing that landmark from appearing. Boss markers and unrelated manual pins no longer hide nearby caves.
 - Existing matching entrance pins are reused.
 
