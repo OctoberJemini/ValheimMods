@@ -52,5 +52,11 @@
     "version": "1.0.1",
     "main_description": true,
     "header_github": true
+  },
+  {
+    "slug": "Fish_Attractor_And_Traps",
+    "version": "1.0.0",
+    "main_description": true,
+    "header_github": true
   }
 ]
