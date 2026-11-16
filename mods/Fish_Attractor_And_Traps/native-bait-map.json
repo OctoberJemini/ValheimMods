@@ -1,0 +1,62 @@
+[
+  {
+    "fish": "Fish1",
+    "bait": "FishingBait",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish8",
+    "bait": "FishingBaitOcean",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish6",
+    "bait": "FishingBaitSwamp",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish10",
+    "bait": "FishingBaitDeepNorth",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish7",
+    "bait": "FishingBaitPlains",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish4_cave",
+    "bait": "FishingBaitCave",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish9",
+    "bait": "FishingBaitMistlands",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish2",
+    "bait": "FishingBait",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish11",
+    "bait": "FishingBaitAshlands",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish5",
+    "bait": "FishingBaitForest",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish3",
+    "bait": "FishingBaitOcean",
+    "weight": 1.0
+  },
+  {
+    "fish": "Fish12",
+    "bait": "FishingBaitMistlands",
+    "weight": 1.0
+  }
+]

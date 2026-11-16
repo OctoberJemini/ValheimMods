@@ -21,6 +21,7 @@ body:
         - "Epic Loot No Fog Destinations"
         - "Epic Loot Luck Finds"
         - "Simple Item Upgrade Preview"
+        - "Fish Attractor & Traps"
         - "Multiple mods / unsure"
     validations:
       required: true

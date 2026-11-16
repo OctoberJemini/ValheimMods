@@ -1,0 +1,10 @@
+{
+  "name": "Fish_Attractor_And_Traps",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/OctoberJemini/ValheimMods",
+  "description": "Build a meat-fed attractor for live fish or a bait-loaded fish trap. Fishing bait determines the catch; load and collect manually.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2360",
+    "ValheimModding-Jotunn-2.30.2"
+  ]
+}
