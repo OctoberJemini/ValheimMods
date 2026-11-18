@@ -1,0 +1,9 @@
+{
+  "name": "Wisplight_Control",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/OctoberJemini/ValheimMods",
+  "description": "Mistlands-gated Wisplight upgrades, a clickable visibility toggle and character glow. Keep clearing mist with the wisp hidden.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2360"
+  ]
+}

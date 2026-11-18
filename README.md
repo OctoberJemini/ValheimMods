@@ -18,6 +18,7 @@ Public source, mod index, and shared bug tracker for OctoberJemini's Valheim mod
 | Fish Attractor & Traps | 1.0.0 | [Source](./mods/Fish_Attractor_And_Traps/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Fish_Attractor_And_Traps/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
 | Manual Tar Pickup | 1.0.1 | [Source](./mods/Manual_Tar_Pickup/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Manual_Tar_Pickup/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
 | Simple Item Upgrade Preview | 1.0.1 | [Source](https://github.com/OctoberJemini/SimpleItemUpgradePreview) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Simple_Item_Upgrade_Preview/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Wisplight Control | 1.0.0 | [Source](./mods/Wisplight_Control/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Wisplight_Control/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
 
 Building Pieces contains Tower Stairs, Roof Corners 45, and Inverted Stone Ramp. Existing Epic Loot and upgrade-preview repositories retain their history and source; this hub links to them rather than duplicating their code.
 

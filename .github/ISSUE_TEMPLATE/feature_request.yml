@@ -18,6 +18,7 @@ body:
         - "Epic Loot Luck Finds"
         - "Simple Item Upgrade Preview"
         - "Fish Attractor & Traps"
+        - "Wisplight Control"
         - "Multiple mods / unsure"
     validations:
       required: true
