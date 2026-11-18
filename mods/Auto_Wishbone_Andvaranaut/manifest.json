@@ -1,6 +1,6 @@
 {
   "name": "Auto_Wishbone_Andvaranaut",
-  "version_number": "1.0.2",
+  "version_number": "1.0.3",
   "website_url": "https://github.com/OctoberJemini/ValheimMods",
   "description": "Carry a Wishbone or Andvaranaut to activate its finder without equipping it. Persistent status icons; Epic Loot optional.",
   "dependencies": [

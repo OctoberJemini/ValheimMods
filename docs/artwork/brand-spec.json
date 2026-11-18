@@ -1,0 +1,12 @@
+{
+  "reference": "Simple_Item_Upgrade_Preview 1.0.1, identical to 1.0.0 artwork",
+  "OCT_bounds": [
+    44,
+    169,
+    169,
+    68
+  ],
+  "identical_footer_rows_from": 165,
+  "background_master": "brand-master.png",
+  "method": "Authorized foreground compositing; original RGB footer copied exactly; no generated redraws"
+}

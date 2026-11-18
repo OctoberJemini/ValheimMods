@@ -8,17 +8,17 @@ Public source, mod index, and shared bug tracker for OctoberJemini's Valheim mod
 
 | Mod | Latest package | Source | Download | Support |
 | --- | --- | --- | --- | --- |
-| Auto Mapping | 1.1.6 | [Source](./mods/Auto_Mapping/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
-| Auto Wishbone & Andvaranaut | 1.0.2 | [Source](./mods/Auto_Wishbone_Andvaranaut/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Wishbone_Andvaranaut/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
-| Building Pieces | 1.1.3 | [Source](./mods/Building_Pieces/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Building_Pieces/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
-| Compact Crafting Upgrades | 1.0.1 | [Source](./mods/Compact_Crafting_Upgrades/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Compact_Crafting_Upgrades/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
-| Dragon Egg Stacks | 1.0.1 | [Source](./mods/Dragon_Egg_Stacks/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Dragon_Egg_Stacks/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
-| Epic Loot Luck Finds | 1.5.3 | [Source](https://github.com/OctoberJemini/EpicLootLuckFinds) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_Luck_Finds/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
-| Epic Loot No Fog Destinations | 0.3.1 | [Source](https://github.com/OctoberJemini/EpicLootNoFogDestinations) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_No_Fog_Destinations/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
-| Fish Attractor & Traps | 1.0.0 | [Source](./mods/Fish_Attractor_And_Traps/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Fish_Attractor_And_Traps/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
-| Manual Tar Pickup | 1.0.1 | [Source](./mods/Manual_Tar_Pickup/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Manual_Tar_Pickup/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Auto Mapping | 1.1.7 | [Source](./mods/Auto_Mapping/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Auto Wishbone & Andvaranaut | 1.0.3 | [Source](./mods/Auto_Wishbone_Andvaranaut/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Wishbone_Andvaranaut/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Building Pieces | 1.1.4 | [Source](./mods/Building_Pieces/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Building_Pieces/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Compact Crafting Upgrades | 1.0.2 | [Source](./mods/Compact_Crafting_Upgrades/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Compact_Crafting_Upgrades/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Dragon Egg Stacks | 1.0.2 | [Source](./mods/Dragon_Egg_Stacks/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Dragon_Egg_Stacks/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Epic Loot Luck Finds | 1.5.4 | [Source](https://github.com/OctoberJemini/EpicLootLuckFinds) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_Luck_Finds/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Epic Loot No Fog Destinations | 0.3.2 | [Source](https://github.com/OctoberJemini/EpicLootNoFogDestinations) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_No_Fog_Destinations/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Fish Attractor & Traps | 1.0.1 | [Source](./mods/Fish_Attractor_And_Traps/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Fish_Attractor_And_Traps/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Manual Tar Pickup | 1.0.2 | [Source](./mods/Manual_Tar_Pickup/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Manual_Tar_Pickup/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
 | Simple Item Upgrade Preview | 1.0.1 | [Source](https://github.com/OctoberJemini/SimpleItemUpgradePreview) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Simple_Item_Upgrade_Preview/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
-| Wisplight Control | 1.0.0 | [Source](./mods/Wisplight_Control/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Wisplight_Control/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
+| Wisplight Control | 1.0.1 | [Source](./mods/Wisplight_Control/) | [Thunderstore](https://thunderstore.io/c/valheim/p/OctoberJemini/Wisplight_Control/) | [Bug reports](https://github.com/OctoberJemini/ValheimMods/issues) |
 
 Building Pieces contains Tower Stairs, Roof Corners 45, and Inverted Stone Ramp. Existing Epic Loot and upgrade-preview repositories retain their history and source; this hub links to them rather than duplicating their code.
 

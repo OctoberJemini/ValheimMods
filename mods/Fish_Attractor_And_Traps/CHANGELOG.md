@@ -1,3 +1,8 @@
+## 1.0.1
+
+- Standardized the package icon background and OCT wordmark placement to match the original OctoberJemini artwork.
+- Artwork-only package update; mod DLLs and gameplay behavior are unchanged.
+
 # Changelog
 
 ## 1.0.0

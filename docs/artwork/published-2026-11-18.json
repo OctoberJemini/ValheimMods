@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Auto_Mapping",
+    "version": "1.1.7",
+    "listing": "https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/",
+    "artwork_only": true,
+    "dlls_unchanged": true
+  },
+  {
+    "name": "Auto_Wishbone_Andvaranaut",
+    "version": "1.0.3",
+    "listing": "https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Wishbone_Andvaranaut/",
+    "artwork_only": true,
+    "dlls_unchanged": true
+  },
+  {
+    "name": "Building_Pieces",
+    "version": "1.1.4",
+    "listing": "https://thunderstore.io/c/valheim/p/OctoberJemini/Building_Pieces/",
+    "artwork_only": true,
+    "dlls_unchanged": true
+  },
+  {
+    "name": "Compact_Crafting_Upgrades",
+    "version": "1.0.2",
+    "listing": "https://thunderstore.io/c/valheim/p/OctoberJemini/Compact_Crafting_Upgrades/",
+    "artwork_only": true,
+    "dlls_unchanged": true
+  },
+  {
+    "name": "Dragon_Egg_Stacks",
+    "version": "1.0.2",
+    "listing": "https://thunderstore.io/c/valheim/p/OctoberJemini/Dragon_Egg_Stacks/",
+    "artwork_only": true,
+    "dlls_unchanged": true
+  },
+  {
+    "name": "Epic_Loot_Luck_Finds",
+    "version": "1.5.4",
+    "listing": "https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_Luck_Finds/",
+    "artwork_only": true,
+    "dlls_unchanged": true
+  },
+  {
+    "name": "Epic_Loot_No_Fog_Destinations",
+    "version": "0.3.2",
+    "listing": "https://thunderstore.io/c/valheim/p/OctoberJemini/Epic_Loot_No_Fog_Destinations/",
+    "artwork_only": true,
+    "dlls_unchanged": true
+  },
+  {
+    "name": "Fish_Attractor_And_Traps",
+    "version": "1.0.1",
+    "listing": "https://thunderstore.io/c/valheim/p/OctoberJemini/Fish_Attractor_And_Traps/",
+    "artwork_only": true,
+    "dlls_unchanged": true
+  },
+  {
+    "name": "Manual_Tar_Pickup",
+    "version": "1.0.2",
+    "listing": "https://thunderstore.io/c/valheim/p/OctoberJemini/Manual_Tar_Pickup/",
+    "artwork_only": true,
+    "dlls_unchanged": true
+  },
+  {
+    "name": "Wisplight_Control",
+    "version": "1.0.1",
+    "listing": "https://thunderstore.io/c/valheim/p/OctoberJemini/Wisplight_Control/",
+    "artwork_only": true,
+    "dlls_unchanged": true
+  }
+]
