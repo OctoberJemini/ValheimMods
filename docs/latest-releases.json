@@ -58,5 +58,11 @@
     "version": "1.0.0",
     "main_description": true,
     "header_github": true
+  },
+  {
+    "slug": "Wisplight_Control",
+    "version": "1.0.0",
+    "main_description": true,
+    "header_github": true
   }
 ]
