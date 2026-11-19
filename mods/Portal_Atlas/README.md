@@ -4,6 +4,32 @@
 
 [Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) | [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) | [Source code](https://github.com/OctoberJemini/ValheimMods/tree/main/mods/Portal_Atlas)
 
+## Screenshots
+
+### Atlas travel picker
+
+Search destinations, save favourites, rename locations, and click a destination name or red map marker to travel.
+
+![Portal Atlas destination list and red portal and pillar markers](https://raw.githubusercontent.com/OctoberJemini/ValheimMods/main/mods/Portal_Atlas/screenshots/atlas-travel-picker.png)
+
+### Atlas on the hotbar
+
+Keep the map in your inventory, or put it in a numbered hotbar slot for quick access.
+
+![Portal Atlas Map in hotbar slot 8](https://raw.githubusercontent.com/OctoberJemini/ValheimMods/main/mods/Portal_Atlas/screenshots/atlas-hotbar.png)
+
+### Buy the map from Haldor
+
+Haldor sells the Portal Atlas Map for **5,000 coins**.
+
+![Portal Atlas Map listed in Haldor's shop for 5,000 coins](https://raw.githubusercontent.com/OctoberJemini/ValheimMods/main/mods/Portal_Atlas/screenshots/haldor-atlas-shop.png)
+
+### Your ordinary map
+
+The ordinary map retains its normal controls and shows passive pillar markers. Open the Atlas item to use the travel picker.
+
+![Ordinary map with portal and Atlas pillar markers](https://raw.githubusercontent.com/OctoberJemini/ValheimMods/main/mods/Portal_Atlas/screenshots/ordinary-map-pillar-markers.png)
+
 ## Quick start
 
 1. Install Portal Atlas Map and its BepInExPack Valheim and Jotunn dependencies, then restart Valheim. For multiplayer, install it on the server and every player's client.
