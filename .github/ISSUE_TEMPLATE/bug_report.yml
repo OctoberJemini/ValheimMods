@@ -23,6 +23,7 @@ body:
         - "Simple Item Upgrade Preview"
         - "Fish Attractor & Traps"
         - "Wisplight Control"
+        - "Portal Atlas Map"
         - "Multiple mods / unsure"
     validations:
       required: true

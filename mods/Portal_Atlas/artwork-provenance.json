@@ -1,0 +1,45 @@
+{
+  "mode": "Built-in imagegen for approved atlas and pillar artwork; code-drawn UI glyphs",
+  "sources": {
+    "atlas": "exec-f29e5279-266c-43b7-a30e-cf9980c18817.png",
+    "pillar": "exec-09a83d21-5010-418c-b6ca-381910b16e30.png"
+  },
+  "reference": "exec-70aa4a8c-21cf-44f6-860b-c83f4c6253e6.png",
+  "prompt": "Recreate each approved item alone with genuine transparency; preserve chunky faceted Valheim style. UI glyphs match the approved sheet.",
+  "pillar_revision": {
+    "mode": "built-in imagegen",
+    "cap_base_master": "upload-artwork/pillar-cap-base-stone-master.png",
+    "icon_master": "upload-artwork/pillar-wide-runes-master.png",
+    "face_master": "upload-artwork/pillar-face-painted-master.png",
+    "prompt": "Match the original cap/base chunky warm grey faceted stone with broad shading and recessed cracks in a flat opaque texture. Preserve the icon stonework and widen its three orange rune columns to fill both faces with small edge margins."
+  },
+  "rune_layout_revision": {
+    "mode": "built-in imagegen rune removal; code-native runtime glyph layout",
+    "master": "upload-artwork/pillar-rune-free-face-master.png",
+    "prompt": "Remove only the orange runes and glow from the existing stone face, reconstructing its stone while preserving cracks, facets, color and shading.",
+    "placement": "Columns at 11%, 50%, 89% of the real face; glyph width 14%, height 5.2%; nominal outer margins 4%."
+  },
+  "current_pillar": {
+    "design": "design/approved-waystone-wisp.png",
+    "geometry": "model/waystone.mesh",
+    "editable_source": "tools/build_waystone.py",
+    "build_icon": "assets/pillar.png",
+    "render_preview": "new-pillar-concept/implemented-waystone-preview.png",
+    "dimensions_metres": {
+      "stone_height": 1.5,
+      "base_width": 0.75,
+      "base_depth": 0.75,
+      "wisp_anchor": 1.59
+    },
+    "materials": "Installed native Valheim stone and native Wisplight visual; orange emissive geometry for windows and base.",
+    "mode": "Original code-generated 3D mesh following the user-approved built-in-imagegen concept; no prior third-party pillar mesh reused."
+  },
+  "painted_material_revision": {
+    "mode": "Built-in imagegen orthographic/material derivation from approved concept, followed by 3D UV mapping and software rendering",
+    "reference": "new-pillar-concept/waystone-wisp-crown-v3.png",
+    "facade_master": "new-pillar-concept/painted-elevation-master.png",
+    "masonry_master": "new-pillar-concept/painted-masonry-master.png",
+    "prompt": "Preserve the approved pillar architecture and painterly taupe-grey stone; create an orthographic facade and tileable matching masonry material with carved knotwork, spiral panels and orange insets. No flat black plaque backing.",
+    "status": "Review draft; not installed."
+  }
+}
