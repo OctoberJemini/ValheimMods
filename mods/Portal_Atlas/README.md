@@ -4,8 +4,6 @@
 
 [Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) | [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) | [Source code](https://github.com/OctoberJemini/ValheimMods/tree/main/mods/Portal_Atlas)
 
-**Portal Atlas replaces PortalNetwork. Disable PortalNetwork and its old icon-size helper before playing.** Auto Mapping is optional and can remain enabled.
-
 ## Quick start
 
 1. Install Portal Atlas Map and its BepInExPack Valheim and Jotunn dependencies, then restart Valheim. For multiplayer, install it on the server and every player's client.
@@ -61,7 +59,7 @@ A carried Atlas lets you travel remotely. Without one, remain beside the normal 
 
 ## The Atlas map and your ordinary map
 
-The Atlas uses the familiar map view with a destination list and highlighted red portal/pillar markers. It retains existing map pins, including pins supplied by other mods such as Epic Loot. Other map mods are not required.
+The Atlas uses the familiar map view with a destination list and highlighted red portal/pillar markers. It retains your existing map pins.
 
 - **All normal portals and Atlas pillars in the current world can be listed, including destinations you have not discovered.** Showing destinations does not reveal unexplored terrain.
 - Normal portals use the familiar portal icon. Pillars use their own obelisk symbol. Labels follow the game's native map-pin styling.
@@ -75,8 +73,6 @@ The Atlas uses the familiar map view with a destination list and highlighted red
 Favourites are saved **per character and world**, immediately when you click the star. Names can be changed without losing a favourite. Location-based storage keeps stars associated with destinations across world reloads; physically moving a destination changes its identity.
 
 **Upgrading from the earlier private test builds:** old ID-only favourite files are preserved, but you must star your destinations again once. Those old IDs were reassigned by Valheim during loading and cannot safely identify the original selections. Public 0.2.8 uses the corrected format.
-
-PortalNetwork favourites and aliases are not imported automatically. Set up your Atlas favourites and labels after switching. The new Enter binding and post-rename refresh are included in this release.
 
 ## Travel restrictions
 
@@ -92,7 +88,9 @@ For manual installation, install those dependencies first, then put `PortalAtlas
 
 For multiplayer, **the host/dedicated server and every player need Portal Atlas and its dependencies**. Use the same release on all participants. Dedicated-server and broader multiplayer compatibility have not yet been comprehensively verified; this first public release follows local in-game testing and automated checks.
 
-Disable **PortalNetwork** and the **PortalNetwork Icon Size** helper. Do not use two mods that both replace portal activation. Auto Mapping and Epic Loot are optional; Portal Atlas does not require either one.
+## Optional companion: Auto Mapping
+
+[Auto Mapping](https://thunderstore.io/c/valheim/p/OctoberJemini/Auto_Mapping/) is a companion mod that automatically marks placed or discovered portals and encountered dungeons and landmarks on your ordinary map. It keeps portal labels up to date, removes markers for destroyed portals, and crosses off visited locations. Portal Atlas Map handles travel, while Auto Mapping helps keep track of the places you build and discover. Auto Mapping is optional; Portal Atlas Map works on its own.
 
 ## Configuration, backups and removal
 
@@ -115,8 +113,6 @@ Before uninstalling, dismantle Atlas pillars and remove Atlas map items, save, a
 **The list is empty or a new destination is missing:** give the initial catalogue scan a moment. Build a portal or pillar if none exist. On multiplayer, confirm the mod is installed on the server and all clients.
 
 **A destination does not travel:** use the Atlas view, not the ordinary M map. Keep the Atlas in your inventory, or remain beside the source portal. Check for restricted inventory items, world modifiers, and an in-game message explaining the block.
-
-**The ordinary map became a travel map or portal controls conflict:** confirm PortalNetwork and its icon helper are disabled, then restart.
 
 **An old favourite disappeared:** private test builds need one-time re-starring for the corrected format. Update all installations to the latest release and check the favourites files before deleting anything.
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.9
+
+- Refocused the store description and usage guide on Portal Atlas Map.
+- Added Auto Mapping as an optional companion for automatically marking portals and discovered locations.
+- Documentation-only update. The plugin DLL and approved icon are unchanged from 0.2.8.
+
 ## 0.2.8
 
 First public release of Portal Atlas Map.
