@@ -1,6 +1,12 @@
 # Portal Atlas Map
 
-**Carry your portal network with you.** Buy an enchanted map from Haldor, open it from your inventory or hotbar, and travel to any normal portal or Atlas pillar in the current world. Search destinations, star your favourites, and give places useful names.
+**Adventure farther. Get home faster.**
+
+Tired of running back to a portal—or remembering which one leads where? Pick up the **Portal Atlas Map from Haldor** and carry your destinations with you.
+
+Keep it in your inventory, open it wherever your adventure takes you, and click a portal or Atlas pillar to travel there. Search by name or biome, star your favourite destinations, and build your own glowing pillars wherever you want a new arrival point.
+
+Whether you’re heading home, meeting friends, or returning to a distant outpost, your next destination is just a click away.
 
 [Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) | [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) | [Source code](https://github.com/OctoberJemini/ValheimMods/tree/main/mods/Portal_Atlas)
 
