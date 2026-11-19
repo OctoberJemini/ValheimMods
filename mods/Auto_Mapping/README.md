@@ -4,7 +4,7 @@
 
 [Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) | [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) | [Browse source and all mods](https://github.com/OctoberJemini/ValheimMods)
 
-Choose **Auto Mapping** in the report form and include the mod version, Valheim version, steps to reproduce, and relevant logs or screenshots.
+Choose **Auto Mapping** in the report form. **We support only the latest release of the mod and Valheim; please update both before reporting a bug.** Include steps to reproduce and relevant logs or screenshots.
 
 
 Automatically mark the portals, dungeons and landmarks you discover while exploring Valheim.
@@ -15,6 +15,10 @@ Automatically mark the portals, dungeons and landmarks you discover while explor
 - Entered locations can be crossed off and faded. The cross marks a visit, not a guarantee that every enemy or chest has been cleared.
 - Includes recognition for More World Locations AIO locations when that mod is installed.
 - Adjust portal and landmark icon sizes and visited-marker opacity.
+
+## Temple visit fix in 1.1.8
+
+Fuling Temple variants now use their full exterior footprint (up to 20 metres) when detecting a visit. Walking through the building should add the normal faded X without requiring you to stand on a tiny spot at its centre. Existing markers and saved exploration records are retained. Revisit a previously affected temple to trigger its automatic visit mark; this update does not retroactively guess which locations you entered.
 
 ## Installation
 
@@ -36,7 +40,7 @@ When the game processes a portal's network destruction, its tracked marker is re
 
 ## Compatibility and validation
 
-Built against Valheim 1.0. Build and game-code checks passed. The latest portal cleanup change still needs in-game verification. Other mods that manage the same map markers may conflict.
+The temple fix builds against the installed Valheim game and passes 19 recognition, saved-pin and visit-detection regression checks. In-game confirmation of the updated temple radius remains pending. Other mods that manage the same map markers may conflict.
 
 ## Credits
 

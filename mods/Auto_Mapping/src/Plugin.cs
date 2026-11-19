@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 
 namespace OctoberJemini.QuietMap {
- [BepInPlugin(Guid,"Auto Mapping","1.1.6")]
+ [BepInPlugin(Guid,"Auto Mapping","1.1.8")]
  [BepInDependency("digi.valheim.automappins",BepInDependency.DependencyFlags.SoftDependency)]
  [BepInDependency("com.noodle.autopoi",BepInDependency.DependencyFlags.SoftDependency)]
  [BepInDependency("com.oathorse.DWMP",BepInDependency.DependencyFlags.SoftDependency)]
@@ -270,7 +270,7 @@ namespace OctoberJemini.QuietMap {
     var live=loaded?.FirstOrDefault(l=>l&&(l.transform.position-pos).sqrMagnitude<100);
     bool hasInterior=live?live.m_hasInterior:location.m_location.m_interiorRadius>0;
     float dx=player.x-pos.x,dz=player.z-pos.z;
-    float entryRadius=LandmarkPolicy.EnterRadius(location.m_location.m_exteriorRadius);
+    float entryRadius=LandmarkPolicy.EnterRadius(name,location.m_location.m_exteriorRadius,live?live.m_exteriorRadius:0);
     if(LandmarkPolicy.Entered(hasInterior,interior,sameInterior,dx*dx+dz*dz,entryRadius,player.y-pos.y)){
      entered.Add(record.Key);if(!insideLocations.Contains(record.Key))SetVisited(record);
     }

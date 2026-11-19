@@ -111,6 +111,13 @@ namespace OctoberJemini.QuietMap {
   }
   internal static bool IsService(string prefab)=>Aio.TryGetValue(prefab??"",out var item)&&item.Service;
   internal static float EnterRadius(float actualRadius)=>Math.Max(5,Math.Min(18,actualRadius*.5f));
+  internal static float EnterRadius(string prefab,float configuredRadius,float loadedRadius){
+   // MWL's temples declare a wider exterior than their spawn-clearance radius.
+   // Halving that clearance left only a five-metre spot around the origin visitable.
+   if((prefab??"").StartsWith("MWL_FulingTemple",StringComparison.OrdinalIgnoreCase))
+    return Math.Max(8,Math.Min(20,Math.Max(configuredRadius,loadedRadius)));
+   return EnterRadius(configuredRadius);
+  }
   internal static bool Entered(bool interiorLocation,bool inInterior,bool sameInterior,float horizontalDistanceSquared,float radius,float heightDifference)=>
    interiorLocation?inInterior&&sameInterior:!inInterior&&Math.Abs(heightDifference)<=20&&horizontalDistanceSquared<=radius*radius;
   internal static bool KeepRecord(string kind)=>kind=="Portal"||kind=="Dungeon"||kind=="Landmark";
