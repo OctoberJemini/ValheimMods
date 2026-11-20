@@ -1,5 +1,13 @@
 # Auto Mapping
 
+**Spend less time placing pins. More time exploring.**
+
+Found a dungeon, stumbled across a landmark, or built a portal youâ€™ll want to find again? Let **Auto Mapping** keep track while you enjoy the adventure.
+
+Portals, dungeons and landmarks are automatically marked as you encounter them. Portal labels follow their names, destroyed portals lose their markers, and visited locations can be crossed off and faded so you can see where youâ€™ve already been.
+
+Whether youâ€™re charting a new coastline or heading back to a favourite outpost, spend your time exploring Valheimâ€”not stopping to label every discovery.
+
 ## Bug reports and source code
 
 [Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) | [Request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml) | [Browse source and all mods](https://github.com/OctoberJemini/ValheimMods)
@@ -7,7 +15,7 @@
 Choose **Auto Mapping** in the report form. **We support only the latest release of the mod and Valheim; please update both before reporting a bug.** Include steps to reproduce and relevant logs or screenshots.
 
 
-Automatically mark the portals, dungeons and landmarks you discover while exploring Valheim.
+## Features
 
 - Portal markers follow their names and disappear when destruction is confirmed by the game.
 - Nearby portal checks reject old records that refer to an unrelated object or position.
@@ -48,6 +56,6 @@ Created for OctoberJemini with Codex. Icon created with OpenAI image generation.
 
 ## Source and support
 
-[Source and mod index](https://github.com/OctoberJemini/ValheimMods) · [Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) · [Feature request](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml)
+[Source and mod index](https://github.com/OctoberJemini/ValheimMods) Ã‚Â· [Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) Ã‚Â· [Feature request](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml)
 
 Build instructions: [BUILDING.md](../../BUILDING.md).
