@@ -10,7 +10,7 @@ using Jotunn.Utils;
 using UnityEngine;
 
 namespace OctoberJemini.FishAttractor {
- [BepInPlugin(Guid,"Fish Attractor & Traps","1.0.0")]
+ [BepInPlugin(Guid,"Fish Attractor & Traps","2.0.0")]
  [BepInDependency(Jotunn.Main.ModGuid)]
  [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod,VersionStrictness.Minor)]
  public sealed class Plugin:BaseUnityPlugin {
@@ -20,7 +20,11 @@ namespace OctoberJemini.FishAttractor {
   internal static ConfigEntry<string> ExtraMeats;
   private GameObject attractor,trap;
   private bool iconDone;
+  private HarmonyLib.Harmony harmony;
+  private TrapService service;
   private void Awake(){
+   service=new TrapService();service.Register();
+   harmony=new HarmonyLib.Harmony(Guid);harmony.PatchAll(typeof(Plugin).Assembly);
    Interval=Config.Bind("Attraction","Seconds between fish",300f,new ConfigDescription("World-time seconds between successful arrivals. No catch-up spawning burst.",new AcceptableValueRange<float>(30,3600)));
    FirstDelay=Config.Bind("Attraction","First fish delay",60f,new ConfigDescription("Seconds after the first bait is loaded before the first fish can arrive.",new AcceptableValueRange<float>(15,600)));
    FishLimit=Config.Bind("Attraction","Nearby fish limit",3,new ConfigDescription("Stops attracting fish when this many fish are within 25 metres. Nearby stations share the same fish count.",new AcceptableValueRange<int>(1,10)));
@@ -30,6 +34,7 @@ namespace OctoberJemini.FishAttractor {
    PrefabManager.OnVanillaPrefabsAvailable+=Register;
    PieceManager.OnPiecesRegistered+=Icon;
   }
+  private void Update(){if(service!=null)service.Update();}
   private void Register(){
    if(attractor)return;
    try{
@@ -80,7 +85,7 @@ namespace OctoberJemini.FishAttractor {
    wear.m_worn.SetActive(false);wear.m_broken.SetActive(false);wear.m_fragmentRoots=new[]{wear.m_new};
    clone.GetComponent<Piece>().m_noInWater=false;
    clone.AddComponent<FishTrap>();
-   var cfg=new PieceConfig{Name="Fish Trap",Description="Load fishing bait and collect matching caught fish. Needs nearby water at least 1.5m deep. One bait per catch; pauses when full.",PieceTable="Hammer",Category="BuildingWorkbench",CraftingStation="piece_workbench",Requirements=new[]{new RequirementConfig{Item="Wood",Amount=20,Recover=true},new RequirementConfig{Item="FineWood",Amount=10,Recover=true},new RequirementConfig{Item="BronzeNails",Amount=10,Recover=true}}};
+   var cfg=new PieceConfig{Name="Fish Trap",Description="Load fishing bait and collect matching caught fish. Needs nearby water at least 1.5m deep. Discover fish in their native biome. Fishing skill improves speed and bait retention. Traps share fish stocks within 20m.",PieceTable="Hammer",Category="BuildingWorkbench",CraftingStation="piece_workbench",Requirements=new[]{new RequirementConfig{Item="Wood",Amount=20,Recover=true},new RequirementConfig{Item="FineWood",Amount=10,Recover=true},new RequirementConfig{Item="BronzeNails",Amount=10,Recover=true}}};
    if(!PieceManager.Instance.AddPiece(new CustomPiece(clone,false,cfg)))throw new InvalidOperationException("Could not register fish trap.");
    trap=clone;
    Logger.LogInfo("Fish Trap registered; bait matches are read from native fish definitions when the world loads.");
@@ -150,7 +155,7 @@ namespace OctoberJemini.FishAttractor {
    group.AddComponent<MeshFilter>().sharedMesh=mesh;group.AddComponent<MeshRenderer>().sharedMaterial=material;
   }
   private void Icon(){if(!attractor||iconDone||SystemInfo.graphicsDeviceType==UnityEngine.Rendering.GraphicsDeviceType.Null)return;try{var sprite=RenderManager.Instance.Render(attractor,RenderManager.IsometricRotation);if(sprite){attractor.GetComponent<Piece>().m_icon=sprite;if(trap){var trapIcon=RenderManager.Instance.Render(trap,RenderManager.IsometricRotation);if(trapIcon)trap.GetComponent<Piece>().m_icon=trapIcon;}iconDone=true;}}catch(Exception e){Logger.LogWarning("Fish Attractor icon: "+e.Message);}}
-  private void OnDestroy(){PrefabManager.OnVanillaPrefabsAvailable-=Register;PieceManager.OnPiecesRegistered-=Icon;}
+  private void OnDestroy(){PrefabManager.OnVanillaPrefabsAvailable-=Register;PieceManager.OnPiecesRegistered-=Icon;if(harmony!=null)harmony.UnpatchSelf();}
  }
  public sealed class Attractor:MonoBehaviour,Hoverable,Interactable {
   private const string BaitKey="oct_fish_bait",DueKey="oct_fish_due",StatusKey="oct_fish_status";

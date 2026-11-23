@@ -4,9 +4,10 @@ param(
  [Parameter(Mandatory=$true)][string]$CompilerPath
 )
 $ErrorActionPreference='Stop'
-$refs=@('mscorlib','System','System.Core','netstandard','assembly_valheim','assembly_utils','assembly_guiutils','UnityEngine','UnityEngine.CoreModule','UnityEngine.PhysicsModule','UnityEngine.AssetBundleModule')|ForEach-Object {'/reference:'+(Join-Path $ManagedPath "$_.dll")}
-$refs+=@("/reference:$BepInExPath\core\BepInEx.dll","/reference:$BepInExPath\plugins\ValheimModding-Jotunn\Jotunn.dll")
+$refs=@('mscorlib','System','System.Core','netstandard','assembly_valheim','assembly_utils','assembly_guiutils','UnityEngine','UnityEngine.CoreModule','UnityEngine.PhysicsModule','UnityEngine.AssetBundleModule','Newtonsoft.Json','SoftReferenceableAssets')|ForEach-Object {'/reference:'+(Join-Path $ManagedPath "$_.dll")}
+$refs+=@("/reference:$BepInExPath\core\BepInEx.dll","/reference:$BepInExPath\core\0Harmony.dll","/reference:$BepInExPath\plugins\ValheimModding-Jotunn\Jotunn.dll")
 $source=Join-Path $PSScriptRoot 'src'
 $dll=Join-Path $PSScriptRoot 'FishAttractor.dll'
-& $CompilerPath /nologo /noconfig /target:library /optimize+ /nostdlib+ /warnaserror+ "/out:$dll" @refs "$source\Plugin.cs" "$source\BaitPolicy.cs" "$source\FishTrap.cs" "$source\TrapRules.cs"
+$sources=@(Get-ChildItem -LiteralPath $source -Filter '*.cs' | ForEach-Object {$_.FullName})
+& $CompilerPath /nologo /noconfig /target:library /optimize+ /nostdlib+ /warnaserror+ /nowarn:1701 "/out:$dll" @refs @sources
 if($LASTEXITCODE -ne 0){throw 'Fish Attractor compilation failed'}
