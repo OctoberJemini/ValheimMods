@@ -19,7 +19,7 @@ Status: published on Nexus on 25 November 2026: https://www.nexusmods.com/valhei
 - Name: **Portal Atlas Map**
 - Author: **OctoberJemini**
 - Version: **0.2.12**
-- Summary: **Buy Haldor's Portal Atlas Map to travel to portals and orb-crowned stone pillars. Search destinations, save favourites and name your places.**
+- Summary: **Your next adventure is a map click away. Buy Haldor's Atlas, raise glowing stone pillars at your outposts, and carry your portal network wherever you roam. Search, name and favourite destinations—without juggling portal tags. Earn the freedom to travel while keeping Valheim's item restrictions intact.**
 - Description: [description.md](description.md).
 - Main thumbnail: [the approved OCT icon](../icon.png), unchanged. Use the complete square artwork; do not crop off OCT branding.
 - Proposed category: Gameplay (select the closest current Valheim category in the form).
