@@ -74,7 +74,7 @@ jobs:
       - name: Check publishing configuration before either upload
         if: inputs.destination != 'validate'
         env:
-          THUNDERSTORE_TOKEN: ${{ secrets.THUNDERSTORE_TOKEN }}
+          THUNDERSTORE_TOKEN: ${{ secrets.THUNDERSTORE_TOKEN || secrets.THUNDERSTORETOKEN }}
           NEXUSMODS_API_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
         run: |
           python - <<'PY'
@@ -89,16 +89,18 @@ jobs:
               assert all(isinstance(data[k], int) and data[k] > 0 for k in ('nexus_mod_id', 'nexus_file_id')), 'Configure Nexus mod and file/group IDs in tools/release/catalog.json first'
           PY
       - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
-        if: inputs.destination == 'thunderstore' || inputs.destination == 'both'
         with:
           dotnet-version: '9.0.x'
       - name: Install official Thunderstore CLI
-        if: inputs.destination == 'thunderstore' || inputs.destination == 'both'
         run: dotnet tool install --global tcli --version 0.2.4
+      - name: Verify Thunderstore CLI is runnable
+        env:
+          DOTNET_ROLL_FORWARD: Major
+        run: tcli publish --help
       - name: Publish exact tested ZIP to Thunderstore
         if: inputs.destination == 'thunderstore' || inputs.destination == 'both'
         env:
-          TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_TOKEN }}
+          TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_TOKEN || secrets.THUNDERSTORETOKEN }}
           DOTNET_ROLL_FORWARD: Major
         run: |
           tcli publish --config-path release-work/thunderstore.toml --file "release-work/OctoberJemini-$MOD-$VERSION.zip"

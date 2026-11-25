@@ -18,6 +18,8 @@ Add repository secrets at https://github.com/OctoberJemini/ValheimMods/settings/
 
 Never put tokens in chat, source files, logs, or workflow inputs. The workflow receives them only for publishing. Validation does not require store credentials.
 
+The existing secret name `THUNDERSTORETOKEN` is also accepted as a fallback; no renaming is necessary.
+
 Nexus upload automation updates an existing file lineage. Create each Nexus mod page and initial main file first, including requirements and installation instructions. In `tools/release/catalog.json`, record its numeric mod ID and the file/group ID required by Nexus's Upload API (not an individual file-version ID). Until mapped, Nexus publishing fails before either store upload. This workflow does not create Nexus pages, upload screenshots or keep long-form page descriptions synchronized.
 
 The initial catalog covers Armor Inscriptions, Worthwhile Treasures, Portal Atlas Map, Fish Attractor & Traps, and Andvaranaut Enchanting. Add other mods with their actual source directory, expected DLL and categories before enabling them in the workflow choices. Linked external source repositories need their own source/tag strategy.
