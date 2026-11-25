@@ -46,7 +46,7 @@ GitHub > Actions > **Publish tested mod** > Run workflow, using the **main** bra
 3. Once publishing is authorized, run again with `thunderstore`, `nexus` or `both`.
 4. Verify the live listings and record the result. Use the same version and ZIP on both stores.
 
-Publishing is manual only: a source push, tag or pull request never publishes a store release. Actions are pinned to commits; Thunderstore's official CLI is pinned to 0.2.4. The job uses read-only GitHub permissions and does not access the desktop or launch Valheim.
+Publishing is manual only: a source push, tag or pull request never publishes a store release. Actions are pinned to commits; Thunderstore's official CLI is pinned to 0.2.4. GitHub requires `contents: write` to access draft release assets; the workflow uses that temporary job token only to download the package and never modifies source or releases. It does not access the desktop or launch Valheim.
 
 ## Partial failure
 

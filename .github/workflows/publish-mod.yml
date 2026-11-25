@@ -29,7 +29,9 @@ on:
         options: [validate, thunderstore, nexus, both]
 
 permissions:
-  contents: read
+  # GitHub restricts access to draft release assets to tokens with write access.
+  # The workflow only reads them; it never edits repository content or releases.
+  contents: write
 
 concurrency:
   group: release-${{ inputs.mod }}
