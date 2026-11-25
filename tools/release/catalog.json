@@ -1,7 +1,7 @@
 {
   "Armor_Inscriptions": {"directory":"Armor_Inscriptions","dll":"ArmorInscriptions.dll","categories":["ai-generated","building","crafting","gear","mods","utility"],"nexus_mod_id":null,"nexus_file_id":null},
   "Worthwhile_Treasures": {"directory":"Worthwhile_Treasures","dll":"WorthwhileTreasures.dll","categories":["ai-generated","mods","utility"],"nexus_mod_id":null,"nexus_file_id":null},
-  "Portal_Atlas_Map": {"directory":"Portal_Atlas","dll":"PortalAtlas.dll","categories":["ai-generated","building","mods","utility"],"nexus_mod_id":null,"nexus_file_id":null},
+  "Portal_Atlas_Map": {"directory":"Portal_Atlas","dll":"PortalAtlas.dll","categories":["ai-generated","building","mods","utility"],"nexus_mod_id":15749645079458,"nexus_file_id":8459433},
   "Fish_Attractor_And_Traps": {"directory":"Fish_Attractor_And_Traps","dll":"FishAttractor.dll","categories":["ai-generated","building","mods","utility"],"nexus_mod_id":null,"nexus_file_id":null},
   "Andvaranaut_Enchanting": {"directory":"Andvaranaut_Enchanting","dll":"AndvaranautEnchanting.dll","categories":["ai-generated","gear","mods","utility"],"nexus_mod_id":null,"nexus_file_id":null}
 }

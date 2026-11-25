@@ -1,6 +1,18 @@
 # Nexus listing preparation — Portal Atlas Map 0.2.12
 
-Status: prepared in Git; not yet submitted or published on Nexus.
+Status: published on Nexus on 25 November 2026: https://www.nexusmods.com/valheim/mods/5026
+
+## Release connection
+
+- Public Valheim page ID: `5026` (game ID `3667`).
+- Nexus API Unique Mod ID: `15749645079458`.
+- Nexus API File ID: `8459433` (main-file lineage; not a file-version ID).
+- IDs were copied from the uploaded main file's **More actions > Advanced** panel.
+- Version `0.2.12` is already live on both stores. Do not upload it again.
+- The approved OCT icon is the thumbnail; all four reviewed gameplay screenshots are in the gallery.
+- Jotunn is linked as a Nexus requirement and the official BepInExPack Valheim page as an external requirement.
+- Generative AI content and media are disclosed. Mod rewards were not enabled.
+- Future releases use **Publish tested mod** with a new tested version and checksum; a Git push alone does not publish.
 
 ## Listing fields
 
@@ -46,7 +58,7 @@ The ZIP's manifest, README, changelog and icon were validated against committed 
 
 1. Create the initial Nexus Valheim mod page with these fields, approved icon and gallery. Keep it unpublished until the page and initial file are ready.
 2. Add the initial main file and requirements, and review Nexus permission/disclosure settings.
-3. Record the assigned mod ID and API file/group ID in `tools/release/catalog.json` under `Portal_Atlas_Map`. These remain null until Nexus assigns real IDs.
+3. Record the assigned API Unique Mod ID and API File ID in `tools/release/catalog.json` under `Portal_Atlas_Map`. Atlas is now mapped using the IDs above.
 4. Commit and push that mapping. Do not guess IDs.
 5. Future file updates use the manual **Publish tested mod** GitHub Actions workflow. Select `nexus` when the same version is already on Thunderstore. A normal Git push does not publish.
 
