@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.12
+
+- Add a centered native Dvergr orb and frame, blue sparks, localized light and quiet spatial hum to the Atlas pillar.
+- Soften and lightly weather stone edges, including lower supports; correct cap geometry.
+- Keep existing carvings, the front arrival marker, dimensions, costs and travel behavior. Existing pillars update when loaded.
+- Confirmed loading and visually reviewed in game. Dedicated-server and broader multiplayer validation remain incomplete.
+
+## 0.2.10
+
+- Only the front base triangle glows orange, identifying the side where Atlas travellers arrive. The other three base triangles remain as dark stone insets.
+- The direction marker appears on placed pillars and the build preview. Upper orange windows and the crown wisp retain their existing appearance.
+
 ## 0.2.9
 
 - Refocused the store description and usage guide on Portal Atlas Map.

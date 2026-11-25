@@ -1,0 +1,10 @@
+{
+  "name": "Armor_Inscriptions",
+  "version_number": "0.5.2",
+  "website_url": "https://github.com/OctoberJemini/ValheimMods",
+  "description": "Earn stamina-free running, jumping, swimming, building and planting through armor patches and tailoring progression. Includes faster swimming. Epic Loot optional.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2360",
+    "ValheimModding-Jotunn-2.30.2"
+  ]
+}

@@ -4,7 +4,7 @@ param(
  [string]$CompilerPath=(Join-Path $PSScriptRoot '..\..\work\tools\roslyn\tasks\net472\csc.exe')
 )
 $ErrorActionPreference='Stop'
-$refs=@('mscorlib','System','System.Core','netstandard','assembly_valheim','assembly_utils','assembly_guiutils','Splatform','UnityEngine','UnityEngine.CoreModule','UnityEngine.AssetBundleModule','UnityEngine.ImageConversionModule','UnityEngine.PhysicsModule','UnityEngine.ParticleSystemModule','UnityEngine.InputLegacyModule','UnityEngine.UI','UnityEngine.UIModule','UnityEngine.TextRenderingModule','UnityEngine.JSONSerializeModule','Unity.TextMeshPro') | ForEach-Object { '/reference:'+(Join-Path $ManagedPath "$_.dll") }
+$refs=@('mscorlib','System','System.Core','netstandard','assembly_valheim','assembly_utils','assembly_guiutils','Splatform','UnityEngine','UnityEngine.CoreModule','UnityEngine.AudioModule','UnityEngine.AssetBundleModule','UnityEngine.ImageConversionModule','UnityEngine.PhysicsModule','UnityEngine.ParticleSystemModule','UnityEngine.InputLegacyModule','UnityEngine.UI','UnityEngine.UIModule','UnityEngine.TextRenderingModule','UnityEngine.JSONSerializeModule','Unity.TextMeshPro') | ForEach-Object { '/reference:'+(Join-Path $ManagedPath "$_.dll") }
 $refs+=@("/reference:$BepInExPath\core\BepInEx.dll","/reference:$BepInExPath\core\0Harmony.dll","/reference:$BepInExPath\plugins\ValheimModding-Jotunn\Jotunn.dll")
 $sources=@(Get-ChildItem -LiteralPath (Join-Path $PSScriptRoot 'src') -Filter '*.cs' | ForEach-Object FullName)
 $resources=@(Get-ChildItem -LiteralPath (Join-Path $PSScriptRoot 'assets') -Filter '*.png' | ForEach-Object { '/resource:'+ $_.FullName+',PortalAtlas.'+$_.Name })

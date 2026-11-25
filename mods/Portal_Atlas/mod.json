@@ -1,6 +1,6 @@
 {
   "name": "Portal Atlas Map",
-  "version": "0.2.9",
+  "version": "0.2.12",
   "status": "published",
   "plugin_id": "OctoberJemini.PortalAtlas",
   "assembly": "PortalAtlas.dll",
@@ -10,5 +10,5 @@
   ],
   "published": true,
   "thunderstore": "https://thunderstore.io/c/valheim/p/OctoberJemini/Portal_Atlas_Map/",
-  "assembly_version": "0.2.8"
+  "assembly_version": "0.2.12"
 }

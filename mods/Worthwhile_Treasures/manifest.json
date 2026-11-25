@@ -1,0 +1,10 @@
+{
+  "name": "Worthwhile_Treasures",
+  "version_number": "1.1.0",
+  "website_url": "https://github.com/OctoberJemini/ValheimMods",
+  "description": "Richer world and dungeon treasure chests, biome-scaled gold, saleable valuables and rare jackpots. Epic Loot compatible.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2360",
+    "ValheimModding-Jotunn-2.30.2"
+  ]
+}

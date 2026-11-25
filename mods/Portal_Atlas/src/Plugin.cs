@@ -22,7 +22,7 @@ namespace OctoberJemini.PortalAtlas
     public sealed class Plugin : BaseUnityPlugin
     {
         public const string Id = "OctoberJemini.PortalAtlas";
-        public const string Version = "0.2.8";
+        public const string Version = "0.2.12";
         public const string Item = "OCT_PortalAtlas";
         public const string Pillar = "OCT_AtlasPillar";
         public const string UnlockKey = "OCT_PortalAtlas_Unlocked";

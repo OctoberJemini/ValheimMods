@@ -1,8 +1,8 @@
 {
   "name": "Portal_Atlas_Map",
-  "version_number": "0.2.9",
+  "version_number": "0.2.12",
   "website_url": "https://github.com/OctoberJemini/ValheimMods",
-  "description": "Buy Haldor's Portal Atlas Map to travel to portals and wisp-crowned pillars. Search destinations, save favourites and name your places.",
+  "description": "Buy Haldor's Portal Atlas Map to travel to portals and orb-crowned stone pillars. Search destinations, save favourites and name your places.",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2360",
     "ValheimModding-Jotunn-2.30.2"

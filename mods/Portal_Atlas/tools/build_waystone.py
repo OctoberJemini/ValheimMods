@@ -3,7 +3,7 @@ from pathlib import Path
 import json,math,struct,numpy as np
 ROOT=Path(__file__).resolve().parents[1]
 LOWER_AXIS_U=360/1024 # Measured top spine / triangle apex in the actual artwork
-groups={k:{'v':[],'uv':[],'t':[]} for k in ('stone','recess','orange','masonry')}
+groups={k:{'v':[],'uv':[],'t':[]} for k in ('stone','recess','orange','masonry','muted')}
 def face(points,kind='stone',normal=None):
     p=np.array(points,float);n=np.cross(p[1]-p[0],p[2]-p[0])
     if normal is not None and n@np.array(normal)<0:p=p[::-1];n=-n
@@ -18,7 +18,7 @@ def face(points,kind='stone',normal=None):
             if n[axis]<0:local=-local
             u=local/.75+.5;v=point[1]/1.5
             if point[1]<.71:u=LOWER_AXIS_U+.44*(u-.5)
-        if kind=='orange' and centre[1]<.30:
+        if kind in ('orange','muted') and centre[1]<.30:
             # Rectify the skewed painted triangle onto the three real corners.
             local=point[0] if axis!=0 else -point[2]
             if n[axis]<0:local=-local
@@ -34,16 +34,21 @@ def ring(w,y,bevel):
 def box(center,size,bevel=.006,kind='stone',turn=0):
     x,y,z=center;w,h,d=size
     # Bevelled rectangular block; flat top and vertical sides stay level.
-    b=min(bevel*1.7,h*.34,w*.15,d*.15)
+    b=min(bevel*2.5,h*.34,w*.15,d*.15)
     rings=[]
     for yy,inset in [(-h/2,b),(-h/2+b*.293,b*.293),(-h/2+b,0),(h/2-b,0),(h/2-b*.293,b*.293),(h/2,b)]:
         rr=ring(w-2*inset,yy,b);rr[:,2]*=(d-2*inset)/(w-2*inset)
+        # Slightly irregular bevel widths wear the corners without moving carvings.
+        for corner in range(8):
+            wear=.0015*(.5+.5*math.sin(x*41+z*29+corner*2.37))
+            axis=0 if corner in (0,1,4,5) else 2
+            rr[corner,axis]-=math.copysign(wear,rr[corner,axis])
         a=turn;rr=rr@np.array([[math.cos(a),0,-math.sin(a)],[0,1,0],[math.sin(a),0,math.cos(a)]])+np.array(center);rings.append(rr)
     for j in range(len(rings)-1):
         for i in range(8):
             k=(i+1)%8;pts=[rings[j][i],rings[j][k],rings[j+1][k],rings[j+1][i]]
             face(pts,kind,np.mean(pts,axis=0)-np.array(center))
-    face(rings[0],kind,(0,-1,0));face(rings[3],kind,(0,1,0))
+    face(rings[0],kind,(0,-1,0));face(rings[-1],kind,(0,1,0))
 def rot(p,side):
     x,y,z=p
     return [(x,y,z),(z,y,-x),(-x,y,-z),(-z,y,x)][side%4]
@@ -75,10 +80,14 @@ for sx in (-1,1):
     for (y0,r0),(y1,r1) in zip(profile,profile[1:]):
         rr=[]
         for y,r in [(y0,r0),(y1,r1)]:
-            rr.append(np.array([[sx*.160,y,sz*.160],[sx*r,y,sz*.160],[sx*r,y,sz*r],[sx*.160,y,sz*r]]))
+            lo=.160; b=.009
+            rr.append(np.array([[sx*(lo+b),y,sz*lo],[sx*(r-b),y,sz*lo],
+                                [sx*r,y,sz*(lo+b)],[sx*r,y,sz*(r-b)],
+                                [sx*(r-b),y,sz*r],[sx*(lo+b),y,sz*r],
+                                [sx*lo,y,sz*(r-b)],[sx*lo,y,sz*(lo+b)]]))
         centre=np.concatenate(rr).mean(axis=0)
-        for k in range(4):
-            j=(k+1)%4;pts=[rr[0][k],rr[0][j],rr[1][j],rr[1][k]];face(pts,normal=np.mean(pts,axis=0)-centre)
+        for k in range(8):
+            j=(k+1)%8;pts=[rr[0][k],rr[0][j],rr[1][j],rr[1][k]];face(pts,normal=np.mean(pts,axis=0)-centre)
         face(rr[0],normal=(0,-1,0));face(rr[1],normal=(0,1,0))
 # Upper tower: actual inset openings framed by corner posts and lintels.
 box((0,.922,0),(.34,.29,.34),.004,'recess')
@@ -99,7 +108,8 @@ for side in range(4):
         pass # Knotwork is painted into the approved stone finish.
         
     triangle=[rot((-.103,.109,.226),side),rot((.103,.109,.226),side),rot((0,.249,.226),side)]
-    face(triangle,'orange',rot((0,0,1),side))
+    # Side zero is local +Z, matching AtlasNetwork's arrival direction.
+    face(triangle,'orange' if side==0 else 'muted',rot((0,0,1),side))
     
     # Centre orange opening and two small slits on either side.
     panel_box(side,0,.923,.203,.258,.244,.012,'recess')

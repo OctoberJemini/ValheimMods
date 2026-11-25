@@ -46,6 +46,9 @@ def render(yaw,width,height):
                 paint=albedo[ty,tx,:3].astype(float)
                 hot=(paint[:,:,0]>180)&(paint[:,:,0]-paint[:,:,2]>100)&(paint[:,:,1]-paint[:,:,2]>35)
                 pixels=paint*light+paint*hot[:,:,None]*.5
+                if key=='muted':
+                    grey=(paint[:,:,0]*.2126+paint[:,:,1]*.7152+paint[:,:,2]*.0722)*.45
+                    pixels=np.repeat(grey[:,:,None],3,axis=2)*light
             region=image[ymin:ymax+1,xmin:xmax+1]
             region[hit,:3]=np.clip(pixels[hit] if pixels is not None else color*light,0,255).astype('uint8');region[hit,3]=255
             depth[ymin:ymax+1,xmin:xmax+1][hit]=zz[hit]
@@ -63,6 +66,7 @@ for i,(angle,label) in enumerate([(35,'Front / right'),(215,'Back / left')]):
  d.ellipse((cx-5,yy-5,cx+5,yy+5),fill='#d9f8ff')
  d.text((x+275,916),label,font=font,fill='#eee7d8',anchor='mt')
 d.text((30,962),'Actual mesh · 1.50 m stone height · 0.75 m footprint · native-wisp position indicated · preview lighting',font=small,fill='#d5c8b2')
+(ROOT/'new-pillar-concept').mkdir(exist_ok=True)
 sheet.save(ROOT/'new-pillar-concept/implemented-waystone-preview.png')
 print('Rendered actual model geometry and stone material; wisp effect position marked.')
 

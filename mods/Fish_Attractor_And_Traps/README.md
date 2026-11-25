@@ -8,6 +8,10 @@ Two buildable fishing pieces: bring live fish to your dock, or catch fish direct
 
 We support only the latest release of this mod and Valheim. Please update both before reporting a problem. Choose **Fish Attractor & Traps** in the report form and include reproduction steps and relevant logs or screenshots.
 
+## Latest update — 2.0.5
+
+Corrects the hammer-menu icons for the fish trap and attractor. The icons retain their actual shapes and native wood texture, with neutral lighting, matte shading and higher-resolution rendering. The result has been visually confirmed in game. Placed models and fishing rules are unchanged. Includes the local-host message-reader fixes from 2.0.1.
+
 ## Upgrading from 1.x
 
 **2.0 is a gameplay balance overhaul.** Traps now respect discovery, Fishing skill and local stock. Update the server and all players together; 1.x and 2.x cannot play together. Existing trap pieces and their contents remain, but their old short timers are replaced by a full first attempt under the new rules. Discoveries start fresh: previously owned fish do not count, and buying fish does not bypass progression. Your original attractor keeps its existing behavior and settings.

@@ -9,3 +9,9 @@ obj/
 *.user
 *.log
 .vs/
+
+# Local packaging, backups and validation output
+outputs/
+**/test-output/
+__pycache__/
+release-work/

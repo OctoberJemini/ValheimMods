@@ -92,7 +92,7 @@ internal static class NativeChecks
         var model=mod.GetType("OctoberJemini.PortalAtlas.WaystoneModel",true);
         var read=model.GetMethod("Read",BindingFlags.Static|BindingFlags.NonPublic);
         Array parts;using(var stream=mod.GetManifestResourceStream("PortalAtlas.waystone.mesh"))parts=(Array)read.Invoke(null,new object[]{stream});
-        Check(parts.Length==4,"Actual packaged waystone contains painted stone, carvings, orange insets and masonry meshes");
+        Check(parts.Length==5,"Packaged waystone includes a separate unlit inset material group");
         var pointLists=new Dictionary<string,UnityEngine.Vector3[]>();
         var uvLists=new Dictionary<string,UnityEngine.Vector2[]>();
         foreach(var part in parts)
@@ -115,7 +115,7 @@ internal static class NativeChecks
         {
             Func<UnityEngine.Vector3,bool> facing=p=>side==0?p.z>.20f:side==1?p.x>.20f:side==2?p.z<-.20f:p.x<-.20f;
             Check(orange.Any(p=>facing(p)&&p.y>.82f && p.y<1.04f),"Orange recessed windows exist on face "+side);
-            Check(orange.Any(p=>facing(p)&&p.y>.10f && p.y<.26f),"Orange triangular base inset exists on face "+side);
+            Check(orange.Any(p=>facing(p)&&p.y>.10f && p.y<.26f)==(side==0),"Only arrival face has an orange triangular base inset: "+side);
         }
         var crownPosition=model.GetMethod("CrownPosition",BindingFlags.Static|BindingFlags.NonPublic);
         foreach(float offset in new[]{-1f,-.008f,0f,.008f,1f})
@@ -134,8 +134,9 @@ internal static class NativeChecks
         var foot=pointLists["masonry"].Where(p=>p.y<.071f).ToArray();
         Check(Math.Abs(foot.Max(p=>p.x)+foot.Min(p=>p.x))<.0001f && Math.Abs(foot.Max(p=>p.z)+foot.Min(p=>p.z))<.0001f,"Foot remains geometrically centred beneath the shaft");
         var bottomUV=Enumerable.Range(0,orange.Length).Where(i=>orange[i].y<.3f).ToArray();
-        Check(bottomUV.Count(i=>orange[i].y>.2f)==4,"Each base aperture has one physical apex");
-        Check(bottomUV.Where(i=>orange[i].y>.2f).All(i=>Math.Abs(uvLists["orange"][i].x-.3515625f)<.0001f && Math.Abs(uvLists["orange"][i].y-(1-1734/2048f))<.0001f),"Painted triangle apex is pinned directly to the actual apex on all four sides");
+        Check(bottomUV.Count(i=>orange[i].y>.2f)==1,"Front base aperture has one glowing apex");
+        Check(pointLists["muted"].Length==9 && pointLists["muted"].Count(p=>p.y>.2f)==3,"Other three base triangles remain as unlit insets");
+        Check(bottomUV.Where(i=>orange[i].y>.2f).All(i=>Math.Abs(uvLists["orange"][i].x-.3515625f)<.0001f && Math.Abs(uvLists["orange"][i].y-(1-1734/2048f))<.0001f),"Front triangle retains the approved texture alignment");
         var reach=(float)model.GetMethod("SparkMaximumReach",BindingFlags.Static|BindingFlags.NonPublic).Invoke(null,null);
         Check(reach>.375f && reach<.50f,"Spark flight can reach slightly past the pillar footprint before fading");
         var styler=mod.GetType("OctoberJemini.PortalAtlas.NativePinStyle",true).GetMethod("Build",BindingFlags.Static|BindingFlags.NonPublic);

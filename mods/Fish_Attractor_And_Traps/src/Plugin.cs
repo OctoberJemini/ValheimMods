@@ -10,7 +10,7 @@ using Jotunn.Utils;
 using UnityEngine;
 
 namespace OctoberJemini.FishAttractor {
- [BepInPlugin(Guid,"Fish Attractor & Traps","2.0.0")]
+ [BepInPlugin(Guid,"Fish Attractor & Traps","2.0.5")]
  [BepInDependency(Jotunn.Main.ModGuid)]
  [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod,VersionStrictness.Minor)]
  public sealed class Plugin:BaseUnityPlugin {
@@ -154,7 +154,51 @@ namespace OctoberJemini.FishAttractor {
    foreach(var filter in filters)UnityEngine.Object.DestroyImmediate(filter.gameObject);
    group.AddComponent<MeshFilter>().sharedMesh=mesh;group.AddComponent<MeshRenderer>().sharedMaterial=material;
   }
-  private void Icon(){if(!attractor||iconDone||SystemInfo.graphicsDeviceType==UnityEngine.Rendering.GraphicsDeviceType.Null)return;try{var sprite=RenderManager.Instance.Render(attractor,RenderManager.IsometricRotation);if(sprite){attractor.GetComponent<Piece>().m_icon=sprite;if(trap){var trapIcon=RenderManager.Instance.Render(trap,RenderManager.IsometricRotation);if(trapIcon)trap.GetComponent<Piece>().m_icon=trapIcon;}iconDone=true;}}catch(Exception e){Logger.LogWarning("Fish Attractor icon: "+e.Message);}}
+  // Render an isolated display model: the native building shader depends on the
+  // world render path, while Jotunn's icon camera is a separate forward camera.
+  // Keep the authored wood texture and tint; never change the placed-piece materials.
+  private Sprite RenderWoodIcon(GameObject prefab){
+   var woodItem=PrefabManager.Instance.GetPrefab("Wood"); var itemRenderer=woodItem?woodItem.GetComponentInChildren<MeshRenderer>(true):null;
+   if(!itemRenderer || !itemRenderer.sharedMaterial)throw new InvalidOperationException("Native wood item material unavailable");
+   var display=new GameObject(prefab.name+"_icon");display.SetActive(false);
+   var materials=new List<Material>();
+   var oldAmbientMode=RenderSettings.ambientMode;var oldAmbient=RenderSettings.ambientLight;var oldIntensity=RenderSettings.ambientIntensity;var oldFog=RenderSettings.fog;
+   RenderSettings.ambientMode=UnityEngine.Rendering.AmbientMode.Flat;RenderSettings.ambientLight=new Color(.65f,.65f,.65f);RenderSettings.ambientIntensity=1;RenderSettings.fog=false;
+   try{
+    var visual=prefab.GetComponent<WearNTear>().m_new;
+    foreach(var source in visual.GetComponentsInChildren<MeshRenderer>(true)){
+     if(!source.enabled)continue;
+     var filter=source.GetComponent<MeshFilter>();if(!filter || !filter.sharedMesh)continue;
+     var part=new GameObject("Timber");part.transform.SetParent(display.transform,false);
+     part.transform.localPosition=prefab.transform.InverseTransformPoint(source.transform.position);part.transform.localRotation=Quaternion.Inverse(prefab.transform.rotation)*source.transform.rotation;
+     var rootScale=prefab.transform.lossyScale;var sourceScale=source.transform.lossyScale; part.transform.localScale=new Vector3(sourceScale.x/rootScale.x,sourceScale.y/rootScale.y,sourceScale.z/rootScale.z);
+     var native=source.sharedMaterial;
+     var material=new Material(itemRenderer.sharedMaterial);materials.Add(material);
+     material.mainTexture=native.GetTexture("_MainTex");
+     material.mainTextureScale=native.GetTextureScale("_MainTex");
+     material.mainTextureOffset=native.GetTextureOffset("_MainTex");
+     material.color=native.HasProperty("_Color")?native.GetColor("_Color"):Color.white;
+     material.SetFloat("_Metallic",0);material.SetFloat("_Glossiness",0); material.SetFloat("_BumpScale",0); material.SetFloat("_AddRain",0); material.SetFloat("_ValueNoise",0); material.SetFloat("_ValueNoiseVertex",0); material.DisableKeyword("_NORMALMAP"); material.SetColor("_EmissionColor",Color.black);
+     part.AddComponent<MeshFilter>().sharedMesh=filter.sharedMesh;
+     part.AddComponent<MeshRenderer>().sharedMaterial=material;
+    }
+    // Move the display as a whole; Jotunn recentres its clone before capture.
+    display.transform.position=new Vector3(0,-10000,0);display.SetActive(true);
+    var icon=RenderManager.Instance.Render(new RenderManager.RenderRequest(display){
+     Rotation=RenderManager.IsometricRotation,Width=512,Height=512,UseCache=false,TargetPlugin=Info.Metadata
+    });
+    if(!icon || !icon.texture || !icon.texture.GetPixels32().Any(pixel=>pixel.a>16))throw new InvalidOperationException("Icon render is empty; retaining previous icon");
+    icon.texture.filterMode=FilterMode.Bilinear;return icon;
+   }finally{RenderSettings.ambientMode=oldAmbientMode;RenderSettings.ambientLight=oldAmbient;RenderSettings.ambientIntensity=oldIntensity;RenderSettings.fog=oldFog;DestroyImmediate(display);foreach(var material in materials)DestroyImmediate(material);}
+  }
+  private void Icon(){
+   if(!attractor||!trap||iconDone||SystemInfo.graphicsDeviceType==UnityEngine.Rendering.GraphicsDeviceType.Null)return;
+   try{
+    var attractorIcon=RenderWoodIcon(attractor);var trapIcon=RenderWoodIcon(trap);
+    if(!attractorIcon||!trapIcon)throw new InvalidOperationException("Icon render returned no image");
+    attractor.GetComponent<Piece>().m_icon=attractorIcon;trap.GetComponent<Piece>().m_icon=trapIcon;iconDone=true;
+   }catch(Exception e){Logger.LogWarning("Fish Attractor icon: "+e.Message);}
+  }
   private void OnDestroy(){PrefabManager.OnVanillaPrefabsAvailable-=Register;PieceManager.OnPiecesRegistered-=Icon;if(harmony!=null)harmony.UnpatchSelf();}
  }
  public sealed class Attractor:MonoBehaviour,Hoverable,Interactable {

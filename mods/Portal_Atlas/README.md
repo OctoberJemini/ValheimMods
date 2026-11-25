@@ -153,3 +153,13 @@ Before uninstalling, dismantle Atlas pillars and remove Atlas map items, save, a
 [Report a bug](https://github.com/OctoberJemini/ValheimMods/issues/new?template=bug_report.yml) or [request a feature](https://github.com/OctoberJemini/ValheimMods/issues/new?template=feature_request.yml). **We support the latest release of the mod and Valheim. Please update both before reporting a problem.** Include single-player/hosted/dedicated setup, reproduction steps, relevant other mods and a short BepInEx log excerpt. Remove credentials and personal information before posting logs.
 
 Created for OctoberJemini with Codex. Code and original artwork were made with AI assistance. Runtime effects and shaders are referenced from the installed game; Valheim's game files are not included in this package.
+
+### Pillar facing direction
+
+The single glowing orange triangle at the base marks the front and arrival side. The other three base triangles are dark stone insets. This cue is visible while placing the pillar and on existing pillars after the update loads.
+
+## Dvergr orb crown and weathered stone
+
+The pillar carries a centered, level Dvergr orb and frame with native blue sparks, a localized blue light and a quiet spatial hum. Light reaches 3 metres; the hum fades within 6 metres. The stone has softer, lightly uneven bevels while retaining its carved panels and front arrival marker. Existing pillars receive the visuals when loaded; no rebuilding is needed.
+
+The crown is decorative: it does not clear mist or create a ward. Build costs and travel rules are unchanged. Version 0.2.12 passed automated checks and local in-game visual review; broader multiplayer testing remains incomplete.

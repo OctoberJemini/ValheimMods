@@ -1,5 +1,40 @@
 # Changelog
 
+## 2.0.5 — Wood icon rendering correction
+
+- Use neutral ambient light and disable fog during icon capture, restoring scene settings immediately afterward.
+- Render 512-pixel matte wood icons with bilinear filtering; no gameplay or placed-model changes.
+- Confirmed in game: the trap and attractor icons display correctly with a wood appearance.
+
+
+## 2.0.4 — Private icon framing correction
+
+- Copy icon geometry in prefab-local coordinates instead of inherited world coordinates.
+- Reject fully transparent rendered images instead of assigning blank menu icons.
+- Local test build; visual confirmation pending.
+
+
+## 2.0.3 — Native icon material
+
+- Fix the unavailable Standard shader introduced in 2.0.2, which left inherited beehive and chest icons visible.
+- Use the loaded native Wood item material for isolated trap-shaped icon renders.
+- Placed models and gameplay remain unchanged. Visual validation pending.
+
+
+## 2.0.2 — Hammer-menu icon rendering
+
+- Render the trap and attractor icons using isolated display materials with the native wood textures.
+- Avoid the native building shader in the icon camera; render both icons at 256 pixels without cached images.
+- Placed models, recipes, bait rules, timing, discovery and shared stocks are unchanged.
+- Includes the host message-reader corrections from 2.0.1.
+- Compiled and API-checked; visual confirmation in game is still pending.
+
+## 2.0.1 — Host message reader fix
+
+- Fixed repeated end-of-stream errors when a local host publishes fishing discoveries and skill.
+- Fixed the same message-cursor issue for local trap requests and catch replies.
+- No recipe, timing, skill, bait-loss or stock balance changes.
+
 ## 2.0.0 — Fishing progression and shared stocks
 
 - Restricted undiscovered fish to their native biome and bait; rod catches and genuine trap collections unlock cross-biome trapping.

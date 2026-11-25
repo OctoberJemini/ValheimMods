@@ -1,6 +1,6 @@
 {
   "name": "Fish_Attractor_And_Traps",
-  "version_number": "2.0.0",
+  "version_number": "2.0.5",
   "website_url": "https://github.com/OctoberJemini/ValheimMods",
   "description": "Baited fish traps with biome discovery, Fishing-skill efficiency and shared recovering stock within 20m. Includes the original live-fish attractor.",
   "dependencies": [

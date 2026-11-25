@@ -52,11 +52,14 @@ Check (@($mod.MainModule.Resources|Where-Object Name -eq 'PortalAtlas.waystone.m
 $visual=$mod.MainModule.Types|Where-Object Name -eq 'AtlasPillarVisual'
 $build=($visual.Methods|Where-Object Name -eq 'Build').Body.Instructions
 Check (@($build|Where-Object {$_.Operand -is [string] -and $_.Operand -eq 'stone_wall_2x1'}).Count -eq 1) 'Waystone must reuse native stone material'
-$wisp=($visual.Methods|Where-Object Name -eq 'AddCrownWisp').Body.Instructions
-Check (@($wisp|Where-Object {$_.Operand -and $_.Operand.ToString() -match 'SE_Demister::m_ballPrefab'}).Count -gt 0) 'Crown must use the actual native wisplight visual'
-$copy=($visual.Methods|Where-Object Name -eq 'CopyWispVisual').Body.Instructions
-Check (@($copy|Where-Object {$_.Operand -and $_.Operand.ToString() -match 'DestroyImmediate'}).Count -gt 0) 'Decorative wisp must remove gameplay components'
-Check (@($wisp|Where-Object {$_.Operand -and $_.Operand.ToString() -match 'Instantiate'}).Count -eq 0) 'Wisp must never clone the full distortion-effect hierarchy'
+$crown=$mod.MainModule.Types|Where-Object Name -eq 'AtlasOrbCrown'
+$orb=($crown.Methods|Where-Object Name -eq 'Build').Body.Instructions
+$copy=($crown.Methods|Where-Object Name -eq 'CopyMesh').Body.Instructions
+Check (@($orb|Where-Object {$_.Operand -is [string] -and $_.Operand -eq 'dverger_demister'}).Count -eq 1) 'Crown must reuse the native Dvergr demister'
+Check (@($orb|Where-Object {$_.Operand -and $_.Operand.ToString() -match 'get_identity'}).Count -gt 0) 'Crown must be level in pillar-local space'
+Check (@(($orb+$copy)|Where-Object {$_.Operand -and $_.Operand.ToString() -match 'Instantiate'}).Count -eq 0) 'Do not clone gameplay or particle hierarchies'
+Check (@($orb|Where-Object {$_.Operand -and $_.Operand.ToString() -match 'set_outputAudioMixerGroup'}).Count -gt 0) 'Hum must respect the native sound mixer'
+Check (@($orb|Where-Object {$_.Operand -and $_.Operand.ToString() -match 'set_spatialBlend'}).Count -gt 0) 'Hum must be positional'
 foreach($asset in @('waystone-painted','waystone-masonry')){Check (@($mod.MainModule.Resources|Where-Object Name -eq "PortalAtlas.$asset.png").Count -eq 1) "Missing approved-style material $asset"}
 Check (@($build|Where-Object {$_.Operand -is [string] -and $_.Operand -eq '_EmissionColor'}).Count -gt 0) 'Windows and base must use emissive orange material'
 $click=($ui.Methods|Where-Object Name -eq 'TravelTo').Body.Instructions
@@ -65,10 +68,7 @@ $render=($ui.Methods|Where-Object Name -eq 'RenderAboveMap').Body.Instructions
 Check (@($render|Where-Object {$_.Operand -and $_.Operand.ToString() -eq 'System.Boolean OctoberJemini.PortalAtlas.AtlasUi::active'}).Count -gt 0) 'Atlas rendering must check explicit Atlas activation'
 
 
-Check (($visual.Methods|Where-Object Name -eq 'Build').Body.ExceptionHandlers.Count -gt 0) 'Optional wisp visual failure must not stop piece registration'
-Check (@($copy|Where-Object {$_.Operand -is [string] -and $_.Operand -eq '_DISTORTION_ON'}).Count -eq 1) 'Decorative wisp materials must disable refraction without changing the native originals'
-Check (@($wisp|Where-Object {$_.Operand -is [string] -and $_.Operand -eq 'effects/flame/flames_local'}).Count -eq 0) 'Crown must not copy the dusty local-flame emitter'
-Check (@($wisp|Where-Object {$_.Operand -is [string] -and $_.Operand -eq 'effects/flame/sparcs_front'}).Count -eq 1) 'Crown must use native small spark visual'
+Check (($visual.Methods|Where-Object Name -eq 'Build').Body.ExceptionHandlers.Count -gt 0) 'Optional orb visual failure must not stop piece registration'
 $icons=$mod.MainModule.Types|Where-Object Name -eq 'Icons'
 $style=($icons.Methods|Where-Object Name -eq 'MatchNativePortal').Body.Instructions
 Check (@($style|Where-Object {$_.Operand -and $_.Operand.ToString() -match 'NativePinStyle::Build'}).Count -eq 1) 'Pillar map style must sample actual native portal artwork'

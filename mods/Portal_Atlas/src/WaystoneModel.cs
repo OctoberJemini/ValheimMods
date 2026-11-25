@@ -24,7 +24,7 @@ namespace OctoberJemini.PortalAtlas
             using(var r=new BinaryReader(stream,Encoding.UTF8,true))
             {
                 if(Encoding.ASCII.GetString(r.ReadBytes(5))!="OCTW1")throw new InvalidDataException("Invalid Atlas waystone mesh");
-                int count=r.ReadInt32();if(count!=4)throw new InvalidDataException("Waystone must have four materials");
+                int count=r.ReadInt32();if(count!=5)throw new InvalidDataException("Waystone must have five materials");
                 var parts=new WaystonePart[count];
                 for(int at=0;at<count;at++)
                 {

@@ -48,7 +48,7 @@ namespace OctoberJemini.FishAttractor {
    nextProfile=Time.unscaledTime+10;
    string fish=String.Join(",",TrapDiscovery.Known(p).OrderBy(x=>x));float skill=p.GetSkillFactor(Skills.SkillType.Fishing)*100;
    var package=new ZPackage();package.Write(world);package.Write(p.GetPlayerID());package.Write(p.GetPlayerName());package.Write(skill);package.Write(fish);
-   if(ZNet.instance.IsServer())AcceptProfile(ZDOMan.GetSessionID(),package);else profiles.SendPackage(ServerPeer,package);
+   if(ZNet.instance.IsServer())AcceptProfile(ZDOMan.GetSessionID(),LocalMessage.ReadFromStart(package));else profiles.SendPackage(ServerPeer,package);
   }
   private bool PlayerMatches(long sender,long player){
    if(sender==ZDOMan.GetSessionID())return Player.m_localPlayer&&Player.m_localPlayer.GetPlayerID()==player;
@@ -66,7 +66,7 @@ namespace OctoberJemini.FishAttractor {
   internal void Request(FishTrap trap,bool ready,string bait,string[] fits,Vector3 water){
    if(world==0||ZRoutedRpc.instance==null)return;
    var zdo=trap.View.GetZDO();var p=new ZPackage();p.Write(world);p.Write(Id(zdo.m_uid));p.Write(zdo.GetLong("oct_trap_applied_v2",0));p.Write(ready);p.Write(bait??"");p.Write(String.Join(",",fits));p.Write(water);
-   if(ZNet.instance.IsServer())Process(ZDOMan.GetSessionID(),p);else requests.SendPackage(ServerPeer,p);
+   if(ZNet.instance.IsServer())Process(ZDOMan.GetSessionID(),LocalMessage.ReadFromStart(p));else requests.SendPackage(ServerPeer,p);
   }
   private IEnumerator OnRequest(long sender,ZPackage p){try{Process(sender,p);}catch(Exception e){Debug.LogWarning("[Fish Traps] Request paused: "+e.Message);}yield break;}
   private void Process(long sender,ZPackage p){
@@ -86,7 +86,7 @@ namespace OctoberJemini.FishAttractor {
    Save(); // Persist receipt and stock debit BEFORE sending any catch to a network owner.
    int competitors=active.Values.Count(t=>now-t.Seen<=45&&TrapEconomy.Nearby(position.x,position.z,position.y,t.P.x,t.P.z,t.P.y));
    var result=new ZPackage();result.Write(world);result.Write(id);result.Write(attempt.Sequence);result.Write(attempt.Pending);result.Write(attempt.Lost);result.Write(attempt.Fish);result.Write(attempt.Bait);result.Write(attempt.Due);result.Write(status);result.Write(profile.Name);result.Write(profile.Skill);result.Write(TrapEconomy.Available(ledger,position.x,position.z,position.y,now));result.Write(competitors);
-   if(sender==ZDOMan.GetSessionID())Receive(result);else replies.SendPackage(sender,result);
+   if(sender==ZDOMan.GetSessionID())Receive(LocalMessage.ReadFromStart(result));else replies.SendPackage(sender,result);
   }
   private IEnumerator OnReply(long sender,ZPackage p){try{if(sender==ServerPeer)Receive(p);}catch(Exception e){Debug.LogWarning("[Fish Traps] Reply paused: "+e.Message);}yield break;}
   private void Receive(ZPackage p){
