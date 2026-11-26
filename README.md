@@ -36,6 +36,8 @@ This is a community mod project, not affiliated with Iron Gate. Downloads and de
 
 See [BUILDING.md](BUILDING.md) and [CONTRIBUTING.md](CONTRIBUTING.md). Game, BepInEx, Harmony, Jotunn and other third-party DLLs are not distributed here.
 
+[Safe Item Stacks](./mods/Safe_Item_Stacks/) is available as development source, including offline policy tests. It has not been published or playtested in game; its prepared package version is not a store release.
+
 ## Credits and rights
 
 Mods are maintained by OctoberJemini with assistance from Codex. Artwork includes AI-assisted icons. The inverted ramp menu icon derives from the MissingPieces icon, transformed as noted in its source package; third-party artwork and game assets retain their original owners' rights. Existing project licenses continue to apply in their respective repositories. No blanket license is granted to third-party assets by this hub.

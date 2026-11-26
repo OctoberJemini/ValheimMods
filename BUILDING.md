@@ -18,6 +18,15 @@ Wisplight Control uses `mods/Wisplight_Control/build.ps1` with `ManagedPath`, `B
 
 ## Additional projects
 
+Safe Item Stacks uses the root script with `-Mod Safe_Item_Stacks`. To run its standalone policy checks from the repository root after building:
+
+```powershell
+& 'D:\Tools\Roslyn\csc.exe' /nologo /out:bin\Safe_Item_Stacks\StackPolicyTests.exe .\mods\Safe_Item_Stacks\src\StackPolicy.cs .\mods\Safe_Item_Stacks\tests\StackPolicyTests.cs
+& .\bin\Safe_Item_Stacks\StackPolicyTests.exe
+```
+
+These checks do not launch the game or validate live multiplayer behavior.
+
 Andvaranaut Enchanting, Armor Inscriptions, Worthwhile Treasures, and Portal Atlas have their own `build.ps1` in the mod directory. Pass `ManagedPath`, `BepInExPath`, and `CompilerPath` explicitly for your machine. Armor Inscriptions also has `test.ps1`; Atlas checks live under `checks/`, and the treasure reward checks are in `checks/RewardChecks.cs`. See each mod README and TESTING document where present for validation scope.
 
 ## Release synchronization

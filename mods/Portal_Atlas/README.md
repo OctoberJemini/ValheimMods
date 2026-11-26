@@ -126,7 +126,14 @@ For multiplayer, **the host/dedicated server and every player need Portal Atlas 
 
 ## Configuration, backups and removal
 
-Start the game once to generate `BepInEx/config/OctoberJemini.PortalAtlas.cfg`. Under `[Trader]`, `AtlasPrice = 5000` controls Haldor's price. Quit the game before editing configuration; for multiplayer, keep the relevant configuration consistent across installations.
+Haldor's Atlas price is configurable and defaults to **5,000 coins**. Start the game once to generate `BepInEx/config/OctoberJemini.PortalAtlas.cfg`, then change `AtlasPrice` under `[Trader]` to any whole-number price from **1 to 100,000 coins**.
+
+```ini
+[Trader]
+AtlasPrice = 5000
+```
+
+**No configuration file is required to use the mod.** If the file or the `AtlasPrice` setting is missing, the mod uses **5,000 coins** and recreates the missing configuration on the next launch. Quit the game before editing or deleting configuration; for multiplayer, keep the relevant configuration consistent across installations.
 
 Back up your characters, worlds, and the mod's data folder before updates or moving hosts:
 

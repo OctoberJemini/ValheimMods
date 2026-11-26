@@ -1,5 +1,5 @@
 param(
- [Parameter(Mandatory=$true)][ValidateSet('Building_Pieces','Dragon_Egg_Stacks','Auto_Mapping','Manual_Tar_Pickup','Auto_Wishbone_Andvaranaut','Compact_Crafting_Upgrades')][string]$Mod,
+ [Parameter(Mandatory=$true)][ValidateSet('Building_Pieces','Safe_Item_Stacks','Dragon_Egg_Stacks','Auto_Mapping','Manual_Tar_Pickup','Auto_Wishbone_Andvaranaut','Compact_Crafting_Upgrades')][string]$Mod,
  [Parameter(Mandatory=$true)][string]$ManagedPath,
  [Parameter(Mandatory=$true)][string]$BepInExPath,
  [Parameter(Mandatory=$true)][string]$CompilerPath
@@ -14,6 +14,7 @@ New-Item -ItemType Directory -Force $taskOutput | Out-Null
 $taskProjects=switch($Mod){
  'Building_Pieces' {@('TowerStairs','RoofCorners45','InvertedStoneRamp')}
  'Dragon_Egg_Stacks' {@('DragonEggStacks')}
+ 'Safe_Item_Stacks' {@('SafeItemStacks')}
  'Auto_Mapping' {@('QuietMap')}
  'Manual_Tar_Pickup' {@('ManualTarPickup')}
  'Auto_Wishbone_Andvaranaut' {@('InventoryFinders')}

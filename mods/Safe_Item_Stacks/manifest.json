@@ -1,0 +1,9 @@
+{
+  "name": "Safe_Item_Stacks",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/OctoberJemini/ValheimMods",
+  "description": "Stack brewing bases, dragon eggs, seal breakers, swamp keys and saddles. Equipment and Dyrnwyn excluded; fermenters still take one base per batch.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2360"
+  ]
+}

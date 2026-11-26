@@ -62,7 +62,14 @@ Epic Loot and Auto Mapping are not required. [Auto Mapping](https://thunderstore
 
 ## Settings, backups and removal
 
-The first launch creates `BepInEx/config/OctoberJemini.PortalAtlas.cfg`. Change `[Trader] AtlasPrice` to adjust the default 5,000-coin price; close the game before editing.
+Haldor's Atlas price is configurable and defaults to **5,000 coins**. The first launch creates `BepInEx/config/OctoberJemini.PortalAtlas.cfg`. Under `[Trader]`, set `AtlasPrice` to any whole-number price from **1 to 100,000 coins**.
+
+```ini
+[Trader]
+AtlasPrice = 5000
+```
+
+**No configuration file is required to use the mod.** If the file or the `AtlasPrice` setting is missing, the mod uses **5,000 coins** and recreates the missing configuration on the next launch. Close the game before editing or deleting configuration.
 
 Back up your character, world and `BepInEx/config/OctoberJemini.PortalAtlas/` folder before updates or moving hosts. That folder stores world labels/counters and per-character/world favourites. Copy it with your world when moving to another host.
 
