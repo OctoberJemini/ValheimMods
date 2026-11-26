@@ -18,18 +18,25 @@ Search destinations, save favourites, rename locations, and click a destination 
 
 ![Portal Atlas destination list and red portal and pillar markers](https://raw.githubusercontent.com/OctoberJemini/ValheimMods/main/mods/Portal_Atlas/screenshots/atlas-travel-picker.png)
 
-### Atlas on the hotbar
-
-Keep the map in your inventory, or put it in a numbered hotbar slot for quick access.
-
-![Portal Atlas Map in hotbar slot 8](https://raw.githubusercontent.com/OctoberJemini/ValheimMods/main/mods/Portal_Atlas/screenshots/atlas-hotbar.png)
-
 ### Buy the map from Haldor
 
-Haldor sells the Portal Atlas Map for **5,000 coins**.
+Haldor sells the Portal Atlas Map for **5,000 coins by default**; the price is configurable.
 
 ![Portal Atlas Map listed in Haldor's shop for 5,000 coins](https://raw.githubusercontent.com/OctoberJemini/ValheimMods/main/mods/Portal_Atlas/screenshots/haldor-atlas-shop.png)
 
+### Atlas pillars in the world
+
+A glowing orb, blue sparks, and a lit front triangle mark your arrival point.
+
+![Atlas pillar beside a Plains shoreline](https://raw.githubusercontent.com/OctoberJemini/ValheimMods/main/mods/Portal_Atlas/screenshots/atlas-pillar-plains.png)
+
+![Atlas pillar inside a Mistlands structure](https://raw.githubusercontent.com/OctoberJemini/ValheimMods/main/mods/Portal_Atlas/screenshots/atlas-pillar-mistlands.png)
+
+### Build a destination
+
+Build an Atlas pillar with 20 Stone, 1 Wisp and 1 Surtling Core. No workbench is required.
+
+![Atlas pillar selected in the hammer menu with its material requirements](https://raw.githubusercontent.com/OctoberJemini/ValheimMods/main/mods/Portal_Atlas/screenshots/atlas-pillar-build-menu.png)
 ### Your ordinary map
 
 The ordinary map retains its normal controls and shows passive pillar markers. Open the Atlas item to use the travel picker.

@@ -9,7 +9,7 @@ Status: published on Nexus on 25 November 2026: https://www.nexusmods.com/valhei
 - Nexus API File ID: `8459433` (main-file lineage; not a file-version ID).
 - IDs were copied from the uploaded main file's **More actions > Advanced** panel.
 - Version `0.2.12` is already live on both stores. Do not upload it again.
-- The approved OCT icon is the thumbnail; all four reviewed gameplay screenshots are in the gallery.
+- The approved OCT icon remains the thumbnail. A replacement six-image gameplay gallery was supplied on 26 November 2026; see the gallery order below.
 - Jotunn is linked as a Nexus requirement and the official BepInExPack Valheim page as an external requirement.
 - Generative AI content and media are disclosed. Mod rewards were not enabled.
 - Future releases use **Publish tested mod** with a new tested version and checksum; a Git push alone does not publish.
@@ -25,7 +25,7 @@ Status: published on Nexus on 25 November 2026: https://www.nexusmods.com/valhei
 - Proposed category: Gameplay (select the closest current Valheim category in the form).
 - Suggested discovery terms: portals, fast travel, map, building, quality of life.
 - Requirements: BepInExPack Valheim 5.4.2360 and Jotunn 2.30.2 / compatible newer version. Jotunn's Nexus page is mod **1138**. BepInExPack's Nexus page is mod **3605**; check its available version before linking it as the installer source. The official Thunderstore dependency URL is in the description.
-- AI disclosure: code, artwork and listing text use AI assistance; some artwork is generated. Apply the corresponding Nexus disclosure fields rather than marking the package AI-free. The four gameplay screenshots are real captures.
+- AI disclosure: code, artwork and listing text use AI assistance; some artwork is generated. Apply the corresponding Nexus disclosure fields rather than marking the package AI-free. The gameplay screenshots are real captures.
 - Permissions: retain existing project rights; do not grant a new blanket license. Upload/fork/training and donation preferences are not configured by this preparation.
 
 ## Reviewed gallery order
@@ -34,12 +34,13 @@ Status: published on Nexus on 25 November 2026: https://www.nexusmods.com/valhei
 | --- | --- | --- |
 | Cover | [icon.png](../icon.png) | Approved OCT promotional thumbnail, not an in-game screenshot. |
 | 1 | [atlas-travel-picker.png](../screenshots/atlas-travel-picker.png) | Search by name or biome, favourite destinations and click a destination to travel. Lead gameplay image. |
-| 2 | [haldor-atlas-shop.png](../screenshots/haldor-atlas-shop.png) | Haldor sells Portal Atlas Map for 5,000 coins by default. It is greyed out because this character has 1,911 coins. Other shop stock is not provided by Atlas. |
-| 3 | [atlas-hotbar.png](../screenshots/atlas-hotbar.png) | The Atlas in hotbar slot 8. Use its slot key to open it while carried. A narrow detail image; not a listing cover. |
-| 4 | [ordinary-map-pillar-markers.png](../screenshots/ordinary-map-pillar-markers.png) | Passive pillar markers on the ordinary map. Open the Atlas to travel. Other pins/HUD content may come from the modded setup. |
+| 2 | [haldor-atlas-shop.png](../screenshots/haldor-atlas-shop.png) | Haldor sells the Atlas for 5,000 coins by default. Other shop stock and the Epic Loot panels are not provided by Atlas. |
+| 3 | [atlas-pillar-plains.png](../screenshots/atlas-pillar-plains.png) | Orb-crowned Atlas pillar beside a Plains shoreline, with its lit arrival-side triangle. |
+| 4 | [atlas-pillar-mistlands.png](../screenshots/atlas-pillar-mistlands.png) | Atlas pillar lighting inside a Mistlands structure. |
+| 5 | [atlas-pillar-build-menu.png](../screenshots/atlas-pillar-build-menu.png) | Pillar recipe: 20 Stone, 1 Wisp and 1 Surtling Core; no workbench required. Build-menu styling comes from the player's modded setup. |
+| 6 | [ordinary-map-pillar-markers.png](../screenshots/ordinary-map-pillar-markers.png) | Passive portal and pillar markers on the ordinary map. Open the Atlas to travel. |
 
-All four screenshots were visually reviewed and retained without generation, retouching or upscaling. Their capture version is not recorded; they document UI behavior still described by 0.2.12, not proof of a fresh 0.2.12 gameplay session. No clean in-game close-up of the new orb crown was found in the Atlas screenshot folder. Do not substitute design renders or the older wisp-pillar concept as current gameplay. Add a genuine current pillar shot later.
-
+These six original screenshots were supplied and approved by the user on 26 November 2026, without retouching or upscaling. They replace the previous gameplay gallery; the OCT cover stays unchanged. Unrelated HUD, items and other mods are visible. The older hotbar detail is retained in Git history, not the current gallery.
 ## Initial main file
 
 - File name: `OctoberJemini-Portal_Atlas_Map-0.2.12.zip`.
