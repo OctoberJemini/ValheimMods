@@ -66,3 +66,8 @@ The ZIP's manifest, README, changelog and icon were validated against committed 
 See [the shared release guide](../../../docs/RELEASING.md). Do not re-upload 0.2.12 as a new Nexus version if the initial main-file upload already created it.
 
 Nexus policy reference reviewed during preparation: https://help.nexusmods.com/article/180-ai-policy-changes-2026
+
+## Screenshot refresh status — 26 November 2026
+
+Six replacement gameplay images were uploaded to Nexus and the Thunderstore 0.2.12 website README was saved with all six image links. No binary or package version was changed. Nexus removal of the four previous gameplay images is awaiting the user's confirmation because its deletion dialog explicitly states the action cannot be undone. Keep the OCT thumbnail.
+
