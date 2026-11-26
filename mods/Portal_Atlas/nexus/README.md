@@ -69,5 +69,5 @@ Nexus policy reference reviewed during preparation: https://help.nexusmods.com/a
 
 ## Screenshot refresh status — 26 November 2026
 
-Six replacement gameplay images were uploaded to Nexus and the Thunderstore 0.2.12 website README was saved with all six image links. No binary or package version was changed. Nexus removal of the four previous gameplay images is awaiting the user's confirmation because its deletion dialog explicitly states the action cannot be undone. Keep the OCT thumbnail.
+Six replacement gameplay images were uploaded to Nexus and the Thunderstore 0.2.12 website README was saved with all six image links. No binary or package version was changed. The user confirmed removal of the four previous gameplay images. They were deleted, and the public Nexus page was verified to show seven gallery items: the unchanged OCT thumbnail and the six new gameplay screenshots.
 
