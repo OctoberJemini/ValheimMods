@@ -59,3 +59,7 @@ Store uploads are not an atomic transaction. Thunderstore runs first; if Nexus f
 - https://github.com/Nexus-Mods/upload-action
 - https://github.com/Nexus-Mods/API-Example
 - https://github.com/thunderstore-io/thunderstore-cli
+
+## Linked No Fog Destinations releases
+
+Use **Publish tested No Fog Destinations** for the separately maintained `OctoberJemini/EpicLootNoFogDestinations` repository. Publish its immutable `v<version>` GitHub tag/release with `Epic_Loot_No_Fog_Destinations-<version>.zip` attached, then run the workflow with the exact ZIP SHA256 and `validate`. After validation succeeds and store publication is authorized, use `thunderstore`. The workflow checks package documentation, manifest, artwork and attribution against that tagged source and records the DLL checksum. It uses the existing hub repository secret; source pushes do not publish. Update the hub index after store publication succeeds.

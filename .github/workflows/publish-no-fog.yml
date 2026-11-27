@@ -1,0 +1,64 @@
+name: Publish tested No Fog Destinations
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version of the public tagged release in EpicLootNoFogDestinations
+        required: true
+        type: string
+      sha256:
+        description: Exact tested package SHA256
+        required: true
+        type: string
+      destination:
+        description: Validate first; thunderstore publishes the exact package
+        required: true
+        default: validate
+        type: choice
+        options: [validate, thunderstore]
+permissions:
+  contents: read
+concurrency:
+  group: release-Epic_Loot_No_Fog_Destinations
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      VERSION: ${{ inputs.version }}
+      SHA256: ${{ inputs.sha256 }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Validate inputs
+        run: |
+          python - <<'PY'
+          import os, re
+          assert re.fullmatch(r'\d+\.\d+\.\d+', os.environ['VERSION'])
+          assert re.fullmatch(r'[a-fA-F0-9]{64}', os.environ['SHA256'])
+          PY
+      - name: Fetch tagged source and tested release package
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git clone --depth 1 --branch "v$VERSION" https://github.com/OctoberJemini/EpicLootNoFogDestinations.git linked-source
+          mkdir -p release-work
+          gh release download "v$VERSION" --repo OctoberJemini/EpicLootNoFogDestinations --pattern "Epic_Loot_No_Fog_Destinations-$VERSION.zip" --dir release-work
+      - name: Validate package against tagged source
+        run: python tools/release/validate_no_fog.py
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9
+        with:
+          dotnet-version: '9.0.x'
+      - name: Install official Thunderstore CLI
+        run: dotnet tool install --global tcli --version 0.2.4
+      - name: Publish exact tested package
+        if: inputs.destination == 'thunderstore'
+        env:
+          TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_TOKEN || secrets.THUNDERSTORETOKEN }}
+          DOTNET_ROLL_FORWARD: Major
+        run: |
+          test -n "$TCLI_AUTH_TOKEN"
+          tcli publish --config-path release-work/thunderstore.toml --file "release-work/Epic_Loot_No_Fog_Destinations-$VERSION.zip"
