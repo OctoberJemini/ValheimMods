@@ -1,0 +1,34 @@
+name: Publish Skuld's Thread 0.1.0 to Thunderstore
+on:
+  push:
+    branches: [release/skulds-thread-thunderstore-0.1.0]
+permissions:
+  contents: read
+concurrency:
+  group: release-Epic_Loot_Skulds_Thread_Graphic
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Validate exact tested package against published source
+        run: |
+          python tools/release/validate.py --package release-assets/OctoberJemini-Epic_Loot_Skulds_Thread_Graphic-0.1.0.zip --mod Epic_Loot_Skulds_Thread_Graphic --version 0.1.0 --sha256 55f73299f9a21cbf98a34143e7d9b9710bd650fec0395ed574c4d7384a46dab0 --ref 5bf4e4e63261f2475830da2d8f002e9d232e4913
+          python -c 'import json; assert json.load(open("release-work/validated.json"))["dll_sha256"] == "b6487a3e5637506a5103fe9be9c1ca5d39a515167d62acf38c8d677aaefe07fa"'
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9
+        with:
+          dotnet-version: '9.0.x'
+      - name: Install official Thunderstore CLI
+        run: dotnet tool install --global tcli --version 0.2.4
+      - name: Publish verified package
+        env:
+          TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_TOKEN || secrets.THUNDERSTORETOKEN }}
+          DOTNET_ROLL_FORWARD: Major
+        run: |
+          test -n "$TCLI_AUTH_TOKEN"
+          tcli publish --config-path release-work/thunderstore.toml --file release-assets/OctoberJemini-Epic_Loot_Skulds_Thread_Graphic-0.1.0.zip
