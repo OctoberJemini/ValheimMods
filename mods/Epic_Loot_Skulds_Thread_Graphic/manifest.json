@@ -1,0 +1,11 @@
+{
+  "name": "Epic_Loot_Skulds_Thread_Graphic",
+  "version_number": "0.1.0",
+  "website_url": "https://github.com/OctoberJemini/ValheimMods/tree/main/mods/Epic_Loot_Skulds_Thread_Graphic",
+  "description": "Gives Epic Loot's Skuld's Thread a coiled-rope model and matching inventory and tracker icons.",
+  "dependencies": [
+    "RandyKnapp-EpicLoot-0.16.0",
+    "ValheimModding-Jotunn-2.30.3",
+    "denikson-BepInExPack_Valheim-5.4.2360"
+  ]
+}

@@ -13,6 +13,7 @@ on:
           - Portal_Atlas_Map
           - Fish_Attractor_And_Traps
           - Andvaranaut_Enchanting
+          - Epic_Loot_Skulds_Thread_Graphic
       version:
         description: Tested version (for example 0.5.2)
         required: true
