@@ -4,5 +4,5 @@
   "Portal_Atlas_Map": {"directory":"Portal_Atlas","dll":"PortalAtlas.dll","categories":["ai-generated","building","mods","utility"],"nexus_mod_id":15749645079458,"nexus_file_id":8459433},
   "Fish_Attractor_And_Traps": {"directory":"Fish_Attractor_And_Traps","dll":"FishAttractor.dll","categories":["ai-generated","building","mods","utility"],"nexus_mod_id":null,"nexus_file_id":null},
   "Andvaranaut_Enchanting": {"directory":"Andvaranaut_Enchanting","dll":"AndvaranautEnchanting.dll","categories":["ai-generated","gear","mods","utility"],"nexus_mod_id":null,"nexus_file_id":null},
-  "Epic_Loot_Skulds_Thread_Graphic": {"directory":"Epic_Loot_Skulds_Thread_Graphic","dll":"SkuldsThreadRope.dll","categories":["ai-generated","gear","mods"],"nexus_mod_id":null,"nexus_file_id":null}
+  "Epic_Loot_Skulds_Thread_Graphic": {"directory":"Epic_Loot_Skulds_Thread_Graphic","dll":"SkuldsThreadRope.dll","categories":["ai-generated","gear","mods"],"nexus_mod_id":15749645079496,"nexus_file_id":8474013}
 }
